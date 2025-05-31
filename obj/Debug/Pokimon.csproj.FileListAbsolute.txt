@@ -1,0 +1,237 @@
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Pokimon.exe.config
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Pokimon.exe
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Pokimon.pdb
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\aiv-fast2d.dll
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\OpenTK.dll
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\OpenTK.pdb
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\OpenTK.xml
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\obj\Debug\Pokimon.csproj.AssemblyReference.cache
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\obj\Debug\Pokimon.csproj.CoreCompileInputs.cache
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\obj\Debug\Pokimon.csproj.Up2Date
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\obj\Debug\Pokimon.exe
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\obj\Debug\Pokimon.pdb
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\MUSIC\1BITTopDownMusics - Track 01 (1BIT Adventure).wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\MUSIC\1BITTopDownMusics - Track 02 (1BIT Dark Cave).wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\MUSIC\1BITTopDownMusics - Track 03 (1BIT Eerie).wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Attack01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Attack02.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Attack03.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Death01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Death02.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Fall01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Hurt01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Hurt02.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Jump01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Jump02.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Jump03.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Land01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\MenuBack01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\MenuCursor01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\MenuValid01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SFX\Pickup01.wav
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\BLOB\ENEMIES_PixelPackTOPDOWN8BIT_Blob Death.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\BLOB\ENEMIES_PixelPackTOPDOWN8BIT_Blob Hurt.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\BLOB\ENEMIES_PixelPackTOPDOWN8BIT_Blob Idle.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\BLOB\ENEMIES_PixelPackTOPDOWN8BIT_Blob Walk.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\NEGABLOB\ENEMIES_PixelPackTOPDOWN8BIT_NegaBlob Death.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\NEGABLOB\ENEMIES_PixelPackTOPDOWN8BIT_NegaBlob Hurt.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\NEGABLOB\ENEMIES_PixelPackTOPDOWN8BIT_NegaBlob Idle.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\NEGABLOB\ENEMIES_PixelPackTOPDOWN8BIT_NegaBlob Walk.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SNAKE\ENEMIES_PixelPackTOPDOWN8BIT_Snake Death.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SNAKE\ENEMIES_PixelPackTOPDOWN8BIT_Snake Idle D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SNAKE\ENEMIES_PixelPackTOPDOWN8BIT_Snake Idle R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SNAKE\ENEMIES_PixelPackTOPDOWN8BIT_Snake Idle U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SNAKE\ENEMIES_PixelPackTOPDOWN8BIT_Snake Walk D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SNAKE\ENEMIES_PixelPackTOPDOWN8BIT_Snake Walk R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SNAKE\ENEMIES_PixelPackTOPDOWN8BIT_Snake Walk U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Attack D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Attack R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Attack U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Death D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Hurt D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Hurt R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Hurt U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Idle D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Idle R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Idle U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Walk D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Walk R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\SORCERER\ENEMIES_PixelPackTOPDOWN8BIT_Sorcerer Walk U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Blob Death.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Blob Hurt.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Blob Idle.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Blob Walk.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_NegaBlob Death.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_NegaBlob Hurt.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_NegaBlob Idle.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_NegaBlob Walk.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Snake Death.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Snake Idle D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Snake Idle R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Snake Idle U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Snake Walk D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Snake Walk R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Snake Walk U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Attack D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Attack R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Attack U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Death D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Hurt D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Hurt R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Hurt U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Idle D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Idle R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Idle U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Walk D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Walk R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ENEMIES\spritesheets\ENEMIES8bit_Sorcerer Walk U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Attack D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Attack R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Attack U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Death.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Hurt D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Hurt R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Hurt U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Idle D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Idle R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Idle U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer JumpRoll D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer JumpRoll R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer JumpRoll U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Push D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Push R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Push U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Walk D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Walk R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\ADVENTURER\HEROS_PixelPackTOPDOWN8BIT_Adventurer Walk U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Attack D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Attack R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Attack U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Death.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Hurt D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Hurt R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Hurt U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Idle D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Idle R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Idle U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog JumpRoll D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog JumpRoll R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog JumpRoll U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Push D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Push R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Push U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Walk D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Walk R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\DOGGO\HEROS_PixelPackTOPDOWN8BIT_Dog Walk U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Attack D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Attack R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Attack U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Death D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Hurt D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Hurt R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Hurt U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Idle D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Idle R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Idle U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess JumpRoll D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess JumpRoll R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess JumpRoll U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Push D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Push R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Push U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Walk D.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Walk R.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\PRINCESS\HEROS_PixelPackTOPDOWN8BIT_Princess Walk U.gif
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Attack D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Attack R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Attack U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Death.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Hurt D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Hurt R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Hurt U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Idle D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Idle R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Idle U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer JumpRoll D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer JumpRoll R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer JumpRoll U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Push D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Push R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Push U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Walk D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Walk R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Adventurer Walk U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Attack D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Attack R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Attack U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Death.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Hurt D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Hurt R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Hurt U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Idle D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Idle R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Idle U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog JumpRoll D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog JumpRoll R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog JumpRoll U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Push D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Push R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Push U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Walk D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Walk R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Dog Walk U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Attack D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Attack R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Attack U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Death D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Hurt D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Hurt R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Hurt U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Idle D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Idle R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Idle U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess JumpRoll D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess JumpRoll R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess JumpRoll U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Push D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Push R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Push U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Walk D.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Walk R.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\HEROS\spritesheets\HEROS8bit_Princess Walk U.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_bananas.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_bell.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_bomb.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_bones.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_book.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_boots.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_bow.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_chest.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_coin.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_compass.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_crown.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_feather.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_floppydisk.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_gem.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_glove.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_hammer.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_harp.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_heart.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_key.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_lamp.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_leaf.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_mirror.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_moneybag.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_mushroom.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_pickaxe.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_pot.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_potion.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_ring.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_scroll.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_seashell.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_shield.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_shovel.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_skull.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_skullkey.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_sword.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\TILESET\PixelPackTOPDOWN8BIT.png
