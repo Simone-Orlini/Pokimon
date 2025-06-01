@@ -10,6 +10,7 @@ namespace Pokimon
         private Vector2 velocity;
         private int speed;
         private Vector2 position;
+        private Camera camera;
 
         public Player()
         {
@@ -18,6 +19,9 @@ namespace Pokimon
 
             speed = 4;
             position = Vector2.Zero;
+
+            camera = new Camera();
+            camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
         }
 
         private void InitAnimations()
@@ -82,6 +86,7 @@ namespace Pokimon
         public override void Update()
         {
             position += velocity * Game.DeltaTime;
+            camera.position = Vector2.Lerp(camera.position, position, 0.05f);
 
             animations[currentAnimation].Sprite.position = position;
             animations[currentAnimation].Play();

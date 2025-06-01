@@ -235,3 +235,4 @@ D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\S
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_skullkey.png
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\SPRITES\ITEMS\item8BIT_sword.png
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\TILESET\PixelPackTOPDOWN8BIT.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map.xml

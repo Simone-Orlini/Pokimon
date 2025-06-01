@@ -50,8 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
+    <Compile Include="Managers\DrawManager.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Managers\Interfaces\IUpdatable.cs" />
+    <Compile Include="Managers\Interfaces\IDrawable.cs" />
+    <Compile Include="Managers\UpdateManager.cs" />
+    <Compile Include="Map\Chunk.cs" />
+    <Compile Include="Map\Layer.cs" />
+    <Compile Include="Map\Map.cs" />
+    <Compile Include="Map\Tile.cs" />
+    <Compile Include="Map\Tileset.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -736,6 +745,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\TILESET\PixelPackTOPDOWN8BIT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Map\XML\map.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
