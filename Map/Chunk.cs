@@ -1,6 +1,8 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
 using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Xml;
 
 namespace Pokimon
@@ -9,33 +11,61 @@ namespace Pokimon
     {
         private int width;
         private int height;
-        private Tile[] tiles;
-        private Vector2 position;
+        private Tileset tileset;
 
         private Sprite sprite;
         private Texture texture;
 
-        private XmlNode xmlChunk;
-
         public int Width { get { return width; } }
         public int Height { get { return height; } }
-        public Vector2 Position { get { return position; } }
+        public Vector2 Position { get { return sprite.position; } }
 
-        public Chunk(XmlNode xmlChunk)
+        public Chunk(Tileset tileset, XmlNode xmlChunk)
         {
             width = GetIntAttribute(xmlChunk, "width");
             height = GetIntAttribute(xmlChunk, "height");
-            position = new Vector2(GetIntAttribute(xmlChunk, "x"), GetIntAttribute(xmlChunk, "y"));
-
+            
             texture = new Texture();
-            sprite = new Sprite(256, 256);
+            sprite = new Sprite(width, height);
+            
+            sprite.position = new Vector2(GetIntAttribute(xmlChunk, "x"), GetIntAttribute(xmlChunk, "y"));
 
-            tiles = new Tile[width * height];
+            this.tileset = tileset;
 
-            for(int i = 0; i <  tiles.Length; i++)
+            string data = xmlChunk.InnerText;
+
+            data = data.Replace("\n\r", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
+
+            string[] ids = data.Split(',');
+
+            //Draw the tiles on the texture
+            byte[] newBitmap = new byte[width * height * tileset.TileWidth * tileset.TileHeight * 4];
+
+            for(int i = 0; i < width * height; i++)
             {
-                tiles[i] = new Tile(0, 0, 16, 16);
+                int currentID = int.Parse(ids[i]);
+                int startPixel = tileset.Tiles[currentID].CalculateTextureCoords() * 4;
+
+                for (int y = 0; y < tileset.TileHeight; y++)
+                {
+                    for (int x = 0; x < tileset.TileWidth; x++)
+                    {
+                        int index1 = (y * width * tileset.TileHeight + x) * 4; // y * width + x
+                        int index2 = startPixel + (y * tileset.TilesetTexture.Width + x) * 4;
+                        newBitmap[index1] = tileset.TilesetTexture.Bitmap[index2];
+                        newBitmap[index1 + 1] = tileset.TilesetTexture.Bitmap[index2 + 1];
+                        newBitmap[index1 + 2] = tileset.TilesetTexture.Bitmap[index2 + 2];
+                        newBitmap[index1 + 3] = tileset.TilesetTexture.Bitmap[index2 + 3];
+                    }
+                }
             }
+
+            for(int i = 0; i < newBitmap.Length; i++)
+            {
+                newBitmap[i] = 255;
+            }
+
+            texture.Update(newBitmap);
         }
 
         private int GetIntAttribute(XmlNode node, string attrName)
@@ -46,6 +76,7 @@ namespace Pokimon
         public void Draw()
         {
             sprite.DrawTexture(texture);
+            //sprite.DrawWireframe(new Vector4(255, 255, 255, 255));
         }
     }
 }

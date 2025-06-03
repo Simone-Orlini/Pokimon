@@ -1,24 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenTK;
 
 namespace Pokimon
 {
-    public struct Tile
+    public class Tile
     {
-        public int X;
-        public int Y;
-        public int Width;
-        public int Height;
+        private int id;
+        private Tileset tileset;
 
-        public Tile(int x, int y, int width, int height)
+        public int Width { get { return tileset.TileWidth; } }
+        public int Height { get { return tileset.TileHeight; } }
+        public int TexturePosition { get { return CalculateTextureCoords(); } }
+        public int GridPosition { get { return CalculateTextureCoords(); } }
+        public int ID {  get { return id; } }
+        public Tileset Tileset { get { return tileset; } }
+
+        public Tile(int id, Tileset tileset)
         {
-            X = x;
-            Y = y;
-            Width = width;
-            Height = height;
+            this.id = id;
+            this.tileset = tileset;
+        }
+
+        public int CalculateGridPosition()
+        {
+            return id;
+        }
+
+        public int CalculateTextureCoords()
+        {
+            return id * Width * Height;
         }
     }
 }

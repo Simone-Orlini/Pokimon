@@ -34,9 +34,9 @@ namespace Pokimon
             mapWidth = GetIntAttribute(mapNode, "width");
             mapHeight = GetIntAttribute(mapNode, "height");
 
-            XmlNode xmlTileset = mapNode.SelectSingleNode("tilemap");
+            XmlNode xmlTileset = mapNode.SelectSingleNode("tileset");
 
-            tileset = new Tileset(GetIntAttribute(xmlTileset, "tilewidth"), GetIntAttribute(xmlTileset, "tileheight"));
+            tileset = new Tileset(GetIntAttribute(xmlTileset, "tilewidth"), GetIntAttribute(xmlTileset, "tileheight"), GetIntAttribute(xmlTileset, "columns"), "Assets/TILESET/PixelPackTOPDOWN8BIT.png");
 
             // get all the layers in the xml
             XmlNodeList xmlLayers = mapNode.SelectNodes("layer");
@@ -47,7 +47,7 @@ namespace Pokimon
             for(int i = 0; i < layers.Length; i++)
             {
                 // create a layer class for each layer found in the xml
-                layers[i] = new Layer(xmlLayers[i]);
+                layers[i] = new Layer(tileset, xmlLayers[i]);
             }
 
             DrawManager.AddItem(this);

@@ -10,7 +10,7 @@ namespace Pokimon
 
         public Chunk[] Chunks { get { return chunks; } }
 
-        public Layer(XmlNode xmlLayer)
+        public Layer(Tileset tileset, XmlNode xmlLayer)
         {
             this.xmlLayer = xmlLayer;
 
@@ -22,7 +22,7 @@ namespace Pokimon
 
             for(int i = 0; i <  chunks.Length; i++)
             {
-                chunks[i] = new Chunk(xmlChunks[i]);
+                chunks[i] = new Chunk(tileset, xmlChunks[i]);
             }
         }
     }
