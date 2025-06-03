@@ -77,9 +77,10 @@
               "RelativeDocumentMoniker": "Map\\Tileset.cs",
               "ToolTip": "D:\\cose desktop\\programmazione\\Programmi\\VisualStudio\\Pokimon\\Map\\Tileset.cs",
               "RelativeToolTip": "Map\\Tileset.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCIAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T08:41:20.829Z"
+              "WhenOpened": "2025-06-03T08:41:20.829Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -113,7 +114,7 @@
               "RelativeDocumentMoniker": "Map\\Chunk.cs",
               "ToolTip": "D:\\cose desktop\\programmazione\\Programmi\\VisualStudio\\Pokimon\\Map\\Chunk.cs",
               "RelativeToolTip": "Map\\Chunk.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAwEMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAwC4AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T14:18:32.256Z",
               "EditorCaption": ""
@@ -126,7 +127,7 @@
               "RelativeDocumentMoniker": "Map\\Tile.cs",
               "ToolTip": "D:\\cose desktop\\programmazione\\Programmi\\VisualStudio\\Pokimon\\Map\\Tile.cs",
               "RelativeToolTip": "Map\\Tile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswB0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T14:54:25.677Z",
               "EditorCaption": ""

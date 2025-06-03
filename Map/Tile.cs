@@ -27,7 +27,7 @@ namespace Pokimon
 
         public int CalculateTextureCoords()
         {
-            return id * Width * Height;
+            return id * Width * Height * 4;
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Pokimon
             width = GetIntAttribute(xmlChunk, "width");
             height = GetIntAttribute(xmlChunk, "height");
             
-            texture = new Texture();
+            texture = new Texture(width * tileset.TileWidth, height * tileset.TileHeight);
             sprite = new Sprite(width, height);
             
             sprite.position = new Vector2(GetIntAttribute(xmlChunk, "x"), GetIntAttribute(xmlChunk, "y"));
@@ -43,8 +43,8 @@ namespace Pokimon
 
             for(int i = 0; i < width * height; i++)
             {
-                int currentID = int.Parse(ids[i]);
-                int startPixel = tileset.Tiles[currentID].CalculateTextureCoords() * 4;
+                int currentID = int.Parse(ids[i]) - 1;
+                int startPixel = tileset.Tiles[currentID].CalculateTextureCoords();
 
                 for (int y = 0; y < tileset.TileHeight; y++)
                 {
@@ -58,11 +58,6 @@ namespace Pokimon
                         newBitmap[index1 + 3] = tileset.TilesetTexture.Bitmap[index2 + 3];
                     }
                 }
-            }
-
-            for(int i = 0; i < newBitmap.Length; i++)
-            {
-                newBitmap[i] = 255;
             }
 
             texture.Update(newBitmap);
