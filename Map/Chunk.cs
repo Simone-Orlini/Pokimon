@@ -44,13 +44,15 @@ namespace Pokimon
             for(int i = 0; i < width * height; i++)
             {
                 int currentID = int.Parse(ids[i]) - 1;
-                int startPixel = tileset.Tiles[currentID].CalculateTextureCoords();
+                int startPixel = tileset.Tiles[currentID].TexturePosition;
+                int tilePosX = (i % width) * tileset.TileWidth;
+                int tilePosY = (i / width) * tileset.TileHeight;
 
                 for (int y = 0; y < tileset.TileHeight; y++)
                 {
                     for (int x = 0; x < tileset.TileWidth; x++)
                     {
-                        int index1 = (y * width * tileset.TileHeight + x) * 4; // y * width + x
+                        int index1 = ((y + tilePosY) * width * tileset.TileHeight + (x + tilePosX)) * 4; // y * width + x
                         int index2 = startPixel + (y * tileset.TilesetTexture.Width + x) * 4;
                         newBitmap[index1] = tileset.TilesetTexture.Bitmap[index2];
                         newBitmap[index1 + 1] = tileset.TilesetTexture.Bitmap[index2 + 1];

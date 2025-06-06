@@ -9,8 +9,8 @@ namespace Pokimon
 
         public int Width { get { return tileset.TileWidth; } }
         public int Height { get { return tileset.TileHeight; } }
-        public int TexturePosition { get { return CalculateTextureCoords(); } }
-        public int GridPosition { get { return CalculateTextureCoords(); } }
+        public int TexturePosition { get { return CalculateTextureCoords() * 4; } }
+        public int GridPosition { get { return CalculateGridPosition(); } }
         public int ID {  get { return id; } }
         public Tileset Tileset { get { return tileset; } }
 
@@ -27,7 +27,7 @@ namespace Pokimon
 
         public int CalculateTextureCoords()
         {
-            return id * Width * Height * 4;
+            return id * Width * Height;
         }
     }
 }
