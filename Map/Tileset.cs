@@ -12,23 +12,25 @@ namespace Pokimon
         private int tileWidth;
         private int tileHeight;
         private int cols;
-        private Texture tilesetTexture;
+        private Texture texture;
         private Tile[] tiles;
 
         public int TileWidth { get { return tileWidth; } }
         public int TileHeight { get { return tileHeight; } }
         public int Cols { get { return cols; } }
-        public Texture TilesetTexture { get { return tilesetTexture; } }
+        public Texture TilesetTexture { get { return texture; } }
         public Tile[] Tiles { get { return tiles; } }
 
         public Tileset(int tileWidth, int tileHeight, int cols, string tilesetPath)
         {
             this.tileWidth = tileWidth;
             this.tileHeight = tileHeight;
-            tilesetTexture = new Texture(tilesetPath);
+            texture = new Texture(tilesetPath);
             this.cols = cols;
 
-            tiles = new Tile[tilesetTexture.Width * tilesetTexture.Height];
+            int tileNum = (texture.Width / tileWidth) * (texture.Height / tileHeight);
+
+            tiles = new Tile[tileNum];
 
             for(int i = 0; i < tiles.Length; i++)
             {
