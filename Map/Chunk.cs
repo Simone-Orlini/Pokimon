@@ -50,7 +50,7 @@ namespace Pokimon
             for (int i = 0; i < width * height; i++)
             {
                 int currentID = int.Parse(ids[i]) - 1;
-                Vector2 startPixel = tileset.Tiles[currentID].TexturePosition;
+                Vector2i startPixel = tileset.Tiles[currentID].TexturePosition;
                 int tilePosX = (i % width) * tileset.TileWidth;
                 int tilePosY = (i / width) * tileset.TileHeight;
 
@@ -59,12 +59,12 @@ namespace Pokimon
                 {
                     for (int x = 0; x < tileset.TileWidth; x++)
                     {
-                        int mapPosition = ((tilePosY + y) * width * tileset.TileHeight + (x + tilePosX)) * 4; // y * width + x, Tile position on the map
-                        int tilesetPosition = (((int)startPixel.Y + y) * tileset.TilesetTexture.Width + x + (int)startPixel.X) * 4; // Tile position on the lookup texture (tileset)
-                        newBitmap[mapPosition] = tileset.TilesetTexture.Bitmap[tilesetPosition];
-                        newBitmap[mapPosition + 1] = tileset.TilesetTexture.Bitmap[tilesetPosition + 1];
-                        newBitmap[mapPosition + 2] = tileset.TilesetTexture.Bitmap[tilesetPosition + 2];
-                        newBitmap[mapPosition + 3] = tileset.TilesetTexture.Bitmap[tilesetPosition + 3];
+                        int pixelOnMapPosition = ((tilePosY + y) * width * tileset.TileHeight + (x + tilePosX)) * 4; // y * width + x, Tile position on the map
+                        int pixelOnTilesetPosition = ((startPixel.Y + y) * tileset.TilesetTexture.Width + x + startPixel.X) * 4; // Tile position on the lookup texture (tileset)
+                        newBitmap[pixelOnMapPosition] = tileset.TilesetTexture.Bitmap[pixelOnTilesetPosition];
+                        newBitmap[pixelOnMapPosition + 1] = tileset.TilesetTexture.Bitmap[pixelOnTilesetPosition + 1];
+                        newBitmap[pixelOnMapPosition + 2] = tileset.TilesetTexture.Bitmap[pixelOnTilesetPosition + 2];
+                        newBitmap[pixelOnMapPosition + 3] = tileset.TilesetTexture.Bitmap[pixelOnTilesetPosition + 3];
                         //texture.Update(newBitmap);
                         //sprite.DrawTexture(texture);
                         //Game.Window.Update();
