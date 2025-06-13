@@ -30,7 +30,7 @@ namespace Pokimon
             int x = id % tileset.Cols;
             int y = id / tileset.Cols;
             
-            return y * Height * tileset.TilesetTexture.Width + x * Width;
+            return y * Height * tileset.TilesetTexture.Width + x * Width; //returns the first pixel of the tile (in pixels, still needs to be multiplied by 4 to get rgba)
         }
     }
 }

@@ -59,6 +59,8 @@ namespace Pokimon
                 {
                     for (int x = 0; x < tileset.TileWidth; x++)
                     {
+                        //calculate the index of every pixel in the tile and take it from the tileset to be copied on the chunk texture
+
                         int pixelOnMapPosition = ((tilePosY + y) * width * tileset.TileHeight + (x + tilePosX)) * 4; // y * width + x, Tile position on the map
                         int pixelOnTexturePosition = (startPixel + x + (y * tileset.TilesetTexture.Width)) * 4; // Tile position on the lookup texture (tileset)
                         newBitmap[pixelOnMapPosition] = tileset.TilesetTexture.Bitmap[pixelOnTexturePosition];
