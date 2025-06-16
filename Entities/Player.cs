@@ -10,7 +10,7 @@ namespace Pokimon
         private Vector2 position;
         private Camera camera;
 
-        public Player()
+        public Player() : base(DrawLayer.Playground)
         {
             InitAnimations();
             currentAnimation = "Idle";

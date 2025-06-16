@@ -1,11 +1,10 @@
 ﻿using Aiv.Fast2D;
 using System;
-using System.Collections.Generic;
 using System.Xml;
 
 namespace Pokimon
 {
-    public class Map : IDrawable
+    public class Map
     {
         private Layer[] layers;
         private int mapWidth; // width in tiles
@@ -49,24 +48,11 @@ namespace Pokimon
                 // create a layer class for each layer found in the xml
                 layers[i] = new Layer(tileset, xmlLayers[i]);
             }
-
-            DrawManager.AddItem(this);
         }
 
         private int GetIntAttribute(XmlNode node, string attrName)
         {
             return int.Parse(node.Attributes.GetNamedItem(attrName).Value); // value is string, needs parsing
-        }
-
-        public void Draw()
-        {
-            for(int i = 0; i < layers.Length; i++)
-            {
-                foreach(Chunk chunk in layers[i].Chunks)
-                {
-                    chunk.Draw();
-                }
-            }
         }
     }
 }

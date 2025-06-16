@@ -2,30 +2,41 @@
 
 namespace Pokimon
 {
+
+    public enum DrawLayer { Background, Playground, Foreground, UI, LAST}
+
     public static class DrawManager
     {
-        private static List<IDrawable> items;
+        private static List<IDrawable>[] items;
 
         public static void Init()
         {
-            items = new List<IDrawable>();
+            items = new List<IDrawable>[(int)DrawLayer.LAST];
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i] = new List<IDrawable>();
+            }
         }
 
         public static void AddItem(IDrawable item)
         {
-            items.Add(item);
+            items[(int)item.DrawLayer].Add(item);
         }
 
         public static void RemoveItem(IDrawable item)
         {
-            items.Remove(item);
+            items[(int)item.DrawLayer].Remove(item);
         }
 
         public static void Draw()
         {
-            foreach(IDrawable item in items)
+            for(int i = 0; i < (int)DrawLayer.LAST; i++)
             {
-                item.Draw();
+                foreach(IDrawable item in items[i])
+                {
+                    item.Draw();
+                }
             }
         }
     }

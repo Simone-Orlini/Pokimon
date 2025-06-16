@@ -6,9 +6,13 @@ namespace Pokimon
     {
         protected Dictionary<string, Animation> animations;
         protected string currentAnimation;
+        protected DrawLayer drawLayer;
 
-        protected Entity()
+        public DrawLayer DrawLayer {  get { return drawLayer; } }
+
+        protected Entity(DrawLayer layer)
         {
+            drawLayer = layer;
             animations = new Dictionary<string, Animation>();
             DrawManager.AddItem(this);
             UpdateManager.AddItem(this);

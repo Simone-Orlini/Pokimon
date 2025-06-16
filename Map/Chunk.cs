@@ -1,8 +1,5 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
-using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Xml;
 
 namespace Pokimon
@@ -12,6 +9,7 @@ namespace Pokimon
         private int width;
         private int height;
         private Tileset tileset;
+        private DrawLayer drawLayer;
 
         private Sprite sprite;
         private Texture texture;
@@ -19,6 +17,7 @@ namespace Pokimon
         public int Width { get { return width; } }
         public int Height { get { return height; } }
         public Vector2 Position { get { return sprite.position; } }
+        public DrawLayer DrawLayer { get { return drawLayer; } }
 
         public Chunk(Tileset tileset, XmlNode xmlChunk)
         {
@@ -37,6 +36,10 @@ namespace Pokimon
             data = data.Replace("\n\r", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
 
             string[] ids = data.Split(',');
+
+            drawLayer = DrawLayer.Background;
+
+            DrawManager.AddItem(this);
 
             CreateMap(ids);
         }
