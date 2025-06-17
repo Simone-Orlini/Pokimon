@@ -16,7 +16,7 @@ namespace Pokimon
 
         public int Width { get { return width; } }
         public int Height { get { return height; } }
-        public Vector2 Position { get { return sprite.position; } }
+        public virtual Vector2 Position { get { return sprite.position; } }
         public DrawLayer DrawLayer { get { return drawLayer; } }
 
         public Chunk(Tileset tileset, XmlNode xmlChunk)
@@ -89,7 +89,7 @@ namespace Pokimon
             texture.Update(newBitmap);
         }
 
-        private int GetIntAttribute(XmlNode node, string attrName)
+        protected int GetIntAttribute(XmlNode node, string attrName)
         {
             return int.Parse(node.Attributes.GetNamedItem(attrName).Value); // value is string, needs parsing
         }

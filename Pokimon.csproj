@@ -59,6 +59,9 @@
     <Compile Include="Map\Chunk.cs" />
     <Compile Include="Map\Layer.cs" />
     <Compile Include="Map\Map.cs" />
+    <Compile Include="Map\Pathfinding\Node.cs" />
+    <Compile Include="Map\Pathfinding\PathfindingChunk.cs" />
+    <Compile Include="Map\Pathfinding\PathfindingLayer.cs" />
     <Compile Include="Map\Tile.cs" />
     <Compile Include="Map\Tileset.cs" />
     <Compile Include="Entities\Player.cs" />
