@@ -46,7 +46,14 @@ namespace Pokimon
             for(int i = 0; i < layers.Length; i++)
             {
                 // create a layer class for each layer found in the xml
-                layers[i] = new Layer(tileset, xmlLayers[i]);
+                if (xmlLayers[i].Attributes.GetNamedItem("name").Value == "Pathfinding")
+                {
+                    layers[i] = new PathfindingLayer(xmlLayers[i]);
+                }
+                else
+                {
+                    layers[i] = new Layer(tileset, xmlLayers[i]);
+                }
             }
         }
 

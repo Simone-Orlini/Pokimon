@@ -22,7 +22,7 @@ namespace Pokimon
 
             player = new Player();
 
-            map = new Map("Map/XML/map2.tmx");
+            map = new Map("Map/XML/map3.tmx");
         }
 
         public static void Run()

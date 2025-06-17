@@ -476,3 +476,4 @@ C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Pokimon.pdb
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Map\XML\map.xml
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map.xml
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map2.tmx
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map3.tmx

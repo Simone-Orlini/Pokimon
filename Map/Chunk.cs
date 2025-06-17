@@ -6,10 +6,10 @@ namespace Pokimon
 {
     public class Chunk : IDrawable
     {
-        private int width;
-        private int height;
-        private Tileset tileset;
-        private DrawLayer drawLayer;
+        protected int width;
+        protected int height;
+        protected Tileset tileset;
+        protected DrawLayer drawLayer;
 
         private Sprite sprite;
         private Texture texture;
@@ -42,6 +42,18 @@ namespace Pokimon
             DrawManager.AddItem(this);
 
             CreateMap(ids);
+        }
+
+        public Chunk(XmlNode xmlChunk)
+        {
+            width = GetIntAttribute(xmlChunk, "width");
+            height = GetIntAttribute(xmlChunk, "height");
+
+            string data = xmlChunk.InnerText;
+
+            data = data.Replace("\n\r", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
+
+            string[] ids = data.Split(',');
         }
 
         private void CreateMap(string[] ids)
