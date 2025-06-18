@@ -1,5 +1,7 @@
 ﻿using Aiv.Fast2D;
+using OpenTK;
 using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace Pokimon
@@ -11,6 +13,8 @@ namespace Pokimon
         private int mapHeight; // height in tiles
 
         private Tileset tileset;
+
+        private PathfindingMap pathfindingMap;
 
         public Map(string xmlFilePath)
         {

@@ -33,8 +33,6 @@ namespace Pokimon
             XmlNode data = xmlLayer.SelectSingleNode("data");
 
             xmlChunks = data.SelectNodes("chunk");
-
-            chunks = new Chunk[xmlChunks.Count];
         }
     }
 }

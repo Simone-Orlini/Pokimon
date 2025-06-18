@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
-using System;
-using System.Xml;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Pokimon
 {
-    public class PathfindingLayer : Layer
+    public class PathfindingMap
     {
         //pathfinding
         Dictionary<Node, Node> cameFrom;    // parents
@@ -13,15 +15,15 @@ namespace Pokimon
 
         // Map
         int width, height;
-        Tile[] cells;
+        int[] cells;
 
         public Node[] Nodes { get; }
 
-        public PathfindingLayer(XmlNode xmlLayer) : base(xmlLayer)
+        public PathfindingMap(int width, int height, int[] cells)
         {
-            //init layer
-            width = int.Parse(xmlLayer.Attributes.GetNamedItem("width").Value);
-            height = int.Parse(xmlLayer.Attributes.GetNamedItem("height").Value);
+            this.width = width;
+            this.height = height;
+            this.cells = cells;
 
             Nodes = new Node[cells.Length];
 
@@ -31,13 +33,13 @@ namespace Pokimon
                 int x = i % width;
                 int y = i / width;
 
-                if (cells[i].GridPosition > 2)
+                if (cells[i] > 2)
                 {
                     Nodes[i] = new Node(x, y, int.MaxValue);
                 }
                 else
                 {
-                    Nodes[i] = new Node(x, y, cells[i].GridPosition);
+                    Nodes[i] = new Node(x, y, cells[i]);
                 }
             }
 
@@ -174,24 +176,6 @@ namespace Pokimon
         private int Heuristic(Node start, Node end)
         {
             return Math.Abs(start.X - end.X) + Math.Abs(start.Y - end.Y);
-        }
-
-        private int[] GetCells()
-        {
-            int[] cells;
-
-            XmlNode data = xmlLayer.SelectSingleNode("data");
-
-            xmlChunks = data.SelectNodes("chunk");
-
-            for (int i = 0; i < xmlChunks.Count; i++)
-            {
-                chunks[i] = new Chunk(xmlChunks[i]);
-            }
-
-
-
-            return cells;
         }
     }
 }

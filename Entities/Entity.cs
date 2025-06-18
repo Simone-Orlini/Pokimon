@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using OpenTK;
+using OpenTK.Graphics.OpenGL;
+using System.Collections.Generic;
 
 namespace Pokimon
 {
@@ -7,8 +9,13 @@ namespace Pokimon
         protected Dictionary<string, Animation> animations;
         protected string currentAnimation;
         protected DrawLayer drawLayer;
+        protected Vector2 position;
+        protected Vector2 velocity;
 
-        public DrawLayer DrawLayer {  get { return drawLayer; } }
+        public DrawLayer DrawLayer { get { return drawLayer; } }
+        public Vector2 Position { get { return position; } set { position = value; } }
+
+        public Vector2 Velocity { get { return velocity; } set { velocity = value; } }
 
         protected Entity(DrawLayer layer)
         {

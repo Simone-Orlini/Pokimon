@@ -1,25 +1,26 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System.Collections.Generic;
 
 namespace Pokimon
 {
     public class Player : Entity
     {
-        private Vector2 velocity;
         private int speed;
-        private Vector2 position;
-        private Camera camera;
+
+        private Agent agent;
+
+        private bool clickedL = false;
 
         public Player() : base(DrawLayer.Playground)
         {
             InitAnimations();
             currentAnimation = "Idle";
 
-            speed = 4;
-            position = Vector2.Zero;
+            agent = new Agent(this);
 
-            camera = new Camera();
-            camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
+            speed = 4;
+            position = new Vector2(25, 25);
         }
 
         private void InitAnimations()
@@ -37,54 +38,25 @@ namespace Pokimon
 
         public void Input()
         {
-            // temporary, it's gonna use pathfinding
-            if (Game.Window.GetKey(KeyCode.W))
-            {
-                currentAnimation = "WalkU";
-                velocity.Y = -1;
-            }
-            else if (Game.Window.GetKey(KeyCode.S))
-            {
-                currentAnimation = "WalkD";
-                velocity.Y = 1;
-            }
-            else
-            {
-                velocity.Y = 0;
-            }
-
-            if (Game.Window.GetKey(KeyCode.A))
-            {
-                currentAnimation = "WalkL";
-                velocity.X = -1;
-            }
-            else if (Game.Window.GetKey(KeyCode.D))
-            {
-                currentAnimation = "WalkR";
-                velocity.X = 1;
-            }
-            else
-            {
-                velocity.X = 0;
-            }
-
-            if(velocity.LengthSquared == 0)
-            {
-                currentAnimation = "Idle";
-            }
-            
-            if(velocity.Length > 1)
-            {
-                velocity.Normalize();
-            }
-
-            velocity *= speed;
+            //if (Game.Window.MouseLeft)
+            //{
+            //    if (!clickedL)
+            //    {
+            //        mousePos = window.MousePosition;
+            //        List<Node> path = map.GetPath(agent.X, agent.Y, (int)mousePos.X, (int)mousePos.Y);
+            //        agent.SetPath(path);
+            //        clickedL = true;
+            //    }
+            //}
+            //else if (clickedL)
+            //{
+            //    clickedL = false;
+            //}
         }
 
         public override void Update()
         {
             position += velocity * Game.DeltaTime;
-            camera.position = Vector2.Lerp(camera.position, position, 0.05f);
 
             animations[currentAnimation].Sprite.position = position;
             animations[currentAnimation].Play();

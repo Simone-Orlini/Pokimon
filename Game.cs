@@ -1,4 +1,5 @@
 ﻿using Aiv.Fast2D;
+using OpenTK;
 
 namespace Pokimon
 {
@@ -8,9 +9,12 @@ namespace Pokimon
         public static float DeltaTime { get { return Window.DeltaTime; } }
         public static float ScreenCenterX { get { return Window.OrthoWidth * 0.5f; } }
         public static float ScreenCenterY { get { return Window.OrthoHeight * 0.5f; } }
+        public static Vector2 MousePosition { get { return Window.MousePosition + new Vector2(Camera.position.X - ScreenCenterX, Camera.position.Y - ScreenCenterY); } }
 
         public static Map map;
         public static Player player;
+
+        public static Camera Camera;
 
         public static void Init()
         {
@@ -19,6 +23,9 @@ namespace Pokimon
 
             UpdateManager.Init();
             DrawManager.Init();
+
+            Camera = new Camera();
+            Camera.pivot = new Vector2(ScreenCenterX, ScreenCenterY);
 
             player = new Player();
 
@@ -34,6 +41,8 @@ namespace Pokimon
                 player.Input();
 
                 player.Update();
+                Camera.position = Vector2.Lerp(Camera.position, player.Position, 0.05f);
+
 
                 DrawManager.Draw();
 
