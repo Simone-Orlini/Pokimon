@@ -81,7 +81,7 @@ namespace Pokimon
                 return;
             }
 
-            int index = cellY * width + cellX;      // MAGIC FORMULA SALVAVITA (VOSTRA)
+            int index = cellY * width + cellX;
 
             Node neighbour = Nodes[index];
 

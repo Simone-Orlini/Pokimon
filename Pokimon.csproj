@@ -61,7 +61,6 @@
     <Compile Include="Map\Map.cs" />
     <Compile Include="Map\Pathfinding\Agent.cs" />
     <Compile Include="Map\Pathfinding\Node.cs" />
-    <Compile Include="Map\Pathfinding\PathfindingLayer.cs" />
     <Compile Include="Map\Pathfinding\PathfindingMap.cs" />
     <Compile Include="Map\Pathfinding\PriorityQueue.cs" />
     <Compile Include="Map\Tile.cs" />

@@ -1,5 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System;
 using System.Collections.Generic;
 
 namespace Pokimon
@@ -38,25 +39,57 @@ namespace Pokimon
 
         public void Input()
         {
-            //if (Game.Window.MouseLeft)
-            //{
-            //    if (!clickedL)
-            //    {
-            //        mousePos = window.MousePosition;
-            //        List<Node> path = map.GetPath(agent.X, agent.Y, (int)mousePos.X, (int)mousePos.Y);
-            //        agent.SetPath(path);
-            //        clickedL = true;
-            //    }
-            //}
-            //else if (clickedL)
-            //{
-            //    clickedL = false;
-            //}
+            if (Game.Window.MouseLeft && MouseInsideScreen())
+            {
+                if (!clickedL)
+                {
+                    List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.MousePosition.X, (int)Game.MousePosition.Y);
+                    agent.SetPath(path);
+                    clickedL = true;
+                }
+            }
+            else if (clickedL)
+            {
+                clickedL = false;
+            }
+        }
+
+        private void UpdateAnimations(Vector2 direction)
+        {
+            if(direction.X > 0)
+            {
+                currentAnimation = "WalkR";
+            }
+            else if(direction.X < 0)
+            {
+                currentAnimation = "WalkL";
+            }
+            else if(direction.Y > 0)
+            {
+                currentAnimation = "WalkD";
+            }
+            else if(direction.Y < 0)
+            {
+                currentAnimation = "WalkU";
+            }
+            else
+            {
+                currentAnimation = "Idle";
+            }
+        }
+
+        private bool MouseInsideScreen()
+        {
+            return Game.MousePosition.X > 0 && Game.MousePosition.X < Game.Window.Width && Game.MousePosition.Y > 0 && Game.MousePosition.Y < Game.Window.Height;
         }
 
         public override void Update()
         {
-            position += velocity * Game.DeltaTime;
+            agent.Update(speed);
+
+            Vector2 direction = agent.GetDirection();
+
+            UpdateAnimations(direction);
 
             animations[currentAnimation].Sprite.position = position;
             animations[currentAnimation].Play();

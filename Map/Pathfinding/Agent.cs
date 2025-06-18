@@ -17,16 +17,12 @@ namespace Pokimon
         public int Y { get { return Convert.ToInt32(owner.Position.Y); } }
         public Node Target { get { return target; } set { target = value; } }
 
-        Sprite pathSpr;
-        protected Vector4 pathColor;
+        Vector2 direction;
 
         public Agent(Entity owner)
         {
             this.owner = owner;
             target = null;
-
-            pathSpr = new Sprite(0.25f, 0.25f);
-            pathColor = new Vector4(0.9f, 0.9f, 0.0f, 1.0f);
         }
 
 
@@ -50,12 +46,19 @@ namespace Pokimon
             }
         }
 
+        public Vector2 GetDirection()
+        {
+            return direction;
+        }
+
         public void Update(float speed)
         {
+            direction = Vector2.Zero;
+
             if(target != null)
             {
                 Vector2 destination = new Vector2(target.X, target.Y);
-                Vector2 direction = destination - owner.Position;
+                direction = destination - owner.Position;
                 float distance = direction.Length;
 
                 if(distance < 0.1f)
@@ -77,18 +80,6 @@ namespace Pokimon
                 else
                 {
                     owner.Position += direction.Normalized() * Game.DeltaTime * speed;
-                }
-            }
-        }
-
-        public void Draw()
-        {
-            if(path != null && path.Count > 0)
-            {
-                foreach(Node n in path)
-                {
-                    pathSpr.position = new Vector2(n.X, n.Y);
-                    pathSpr.DrawColor(pathColor);
                 }
             }
         }

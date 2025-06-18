@@ -1,5 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System.Net.NetworkInformation;
 using System.Xml;
 
 namespace Pokimon
@@ -13,11 +14,13 @@ namespace Pokimon
 
         private Sprite sprite;
         private Texture texture;
+        private int[] ids;
 
         public int Width { get { return width; } }
         public int Height { get { return height; } }
         public virtual Vector2 Position { get { return sprite.position; } }
         public DrawLayer DrawLayer { get { return drawLayer; } }
+        public int[] Ids { get { return ids; } }
 
         public Chunk(Tileset tileset, XmlNode xmlChunk)
         {
@@ -35,13 +38,20 @@ namespace Pokimon
 
             data = data.Replace("\n\r", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
 
-            string[] ids = data.Split(',');
+            string[] StringIds = data.Split(',');
+
+            ids = new int[StringIds.Length];
+
+            for(int i = 0; i < StringIds.Length; i++)
+            {
+                ids[i] = int.Parse(StringIds[i]);
+            }
 
             drawLayer = DrawLayer.Background;
 
             DrawManager.AddItem(this);
 
-            CreateMap(ids);
+            CreateMap();
         }
 
         public Chunk(XmlNode xmlChunk)
@@ -53,10 +63,17 @@ namespace Pokimon
 
             data = data.Replace("\n\r", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
 
-            string[] ids = data.Split(',');
+            string[] StringIds = data.Split(',');
+
+            ids = new int[StringIds.Length];
+
+            for (int i = 0; i < StringIds.Length; i++)
+            {
+                ids[i] = int.Parse(StringIds[i]);
+            }
         }
 
-        private void CreateMap(string[] ids)
+        private void CreateMap()
         {
             //Draw the tiles on the texture
             byte[] newBitmap = new byte[width * height * tileset.TileWidth * tileset.TileHeight * 4];
@@ -64,7 +81,7 @@ namespace Pokimon
             // loop all the tiles in the chunk
             for (int i = 0; i < width * height; i++)
             {
-                int currentID = int.Parse(ids[i]) - 1;
+                int currentID = ids[i] - 1;
                 int startPixel = tileset.Tiles[currentID].TexturePosition;
                 int tilePosX = (i % width) * tileset.TileWidth;
                 int tilePosY = (i / width) * tileset.TileHeight;
