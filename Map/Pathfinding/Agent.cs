@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Aiv.Fast2D;
 using OpenTK;
 
@@ -37,7 +38,7 @@ namespace Pokimon
             }
             else if(path.Count > 0)
             {
-                int dist = Math.Abs(path[0].X - target.X) + Math.Abs(path[0].Y - target.Y);
+                int dist = (int)(Math.Abs(path[0].X - target.X) + Math.Abs(path[0].Y - target.Y));
 
                 if(dist > 1)
                 {

@@ -13,7 +13,7 @@ namespace Pokimon
 
         private bool clickedL = false;
 
-        public Player() : base(DrawLayer.Playground)
+        public Player(Vector2 startPosition) : base(DrawLayer.Playground)
         {
             InitAnimations();
             currentAnimation = "Idle";
@@ -21,7 +21,7 @@ namespace Pokimon
             agent = new Agent(this);
 
             speed = 4;
-            position = new Vector2(25, 25);
+            position = new Vector2(2, 30.5f);
         }
 
         private void InitAnimations()
@@ -43,7 +43,7 @@ namespace Pokimon
             {
                 if (!clickedL)
                 {
-                    List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.MousePosition.X, (int)Game.MousePosition.Y);
+                    List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.RelativeMousePosition.X, (int)Game.RelativeMousePosition.Y);
                     agent.SetPath(path);
                     clickedL = true;
                 }
@@ -80,7 +80,7 @@ namespace Pokimon
 
         private bool MouseInsideScreen()
         {
-            return Game.MousePosition.X > 0 && Game.MousePosition.X < Game.Window.Width && Game.MousePosition.Y > 0 && Game.MousePosition.Y < Game.Window.Height;
+            return (Game.AbsoluteMousePosition.X > 0 && Game.AbsoluteMousePosition.X < Game.Window.OrthoWidth) && (Game.AbsoluteMousePosition.Y > 0 && Game.AbsoluteMousePosition.Y < Game.Window.OrthoHeight);
         }
 
         public override void Update()

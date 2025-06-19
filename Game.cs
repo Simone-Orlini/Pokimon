@@ -9,8 +9,9 @@ namespace Pokimon
         public static float DeltaTime { get { return Window.DeltaTime; } }
         public static float ScreenCenterX { get { return Window.OrthoWidth * 0.5f; } }
         public static float ScreenCenterY { get { return Window.OrthoHeight * 0.5f; } }
-        public static Vector2 MousePosition { get { return Window.MousePosition + new Vector2(Camera.position.X - ScreenCenterX, Camera.position.Y - ScreenCenterY); } }
-        public static Tileset Tileset { get { return tileset; } }
+        public static Vector2 RelativeMousePosition { get { return Window.MousePosition + new Vector2(Camera.position.X - ScreenCenterX, Camera.position.Y - ScreenCenterY); } }
+        public static Vector2 AbsoluteMousePosition { get { return Window.MousePosition; } }
+        public static Tileset Tileset { get { return tileset; } set { tileset = value; } }
 
         public static Map Map;
         public static Player player;
@@ -30,11 +31,10 @@ namespace Pokimon
             Camera = new Camera();
             Camera.pivot = new Vector2(ScreenCenterX, ScreenCenterY);
 
-            player = new Player();
-            Camera.position = player.Position;
-
             Map = new Map("Map/XML/map3.tmx");
-            tileset = Map.Tileset;
+
+            player = new Player(Map.PlayerStartPosition);
+            Camera.position = player.Position;
         }
 
         public static void Run()

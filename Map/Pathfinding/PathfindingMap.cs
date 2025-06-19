@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OpenTK;
 
 namespace Pokimon
 {
@@ -15,46 +14,45 @@ namespace Pokimon
 
         // Map
         int width, height;
-        int[] cells;
+        Dictionary<Vector2, int> cells;
 
         public Node[] Nodes { get; }
 
-        public PathfindingMap(int width, int height, int[] cells)
+        public PathfindingMap(int width, int height, Dictionary<Vector2, int> cells)
         {
             this.width = width;
             this.height = height;
             this.cells = cells;
 
-            Nodes = new Node[cells.Length];
+            Nodes = new Node[cells.Count];
+
+            int createdNodeCounter = 0;
 
             // build Nodes from cells
-            for (int i = 0; i < cells.Length; i++)
+            foreach(var cell in cells)
             {
-                int x = i % width;
-                int y = i / width;
+                float x = cell.Key.X;
+                float y = cell.Key.Y;
 
-                if (cells[i] > 2)
+                if (cell.Value > 2)
                 {
-                    Nodes[i] = new Node(x, y, int.MaxValue);
+                    Nodes[createdNodeCounter] = new Node(x, y, int.MaxValue);
                 }
                 else
                 {
-                    Nodes[i] = new Node(x, y, cells[i]);
+                    Nodes[createdNodeCounter] = new Node(x, y, cell.Value);
                 }
+
+                createdNodeCounter++;
             }
 
-            for (int y = 0; y < height; y++)
+            foreach(Node node in Nodes)
             {
-                for (int x = 0; x < width; x++)
-                {
-                    int index = y * width + x;
-
-                    AddNeighbours(Nodes[index], x, y);
-                }
+                AddNeighbours(node, node.X, node.Y);
             }
         }
 
-        private void AddNeighbours(Node node, int x, int y)
+        private void AddNeighbours(Node node, float x, float y)
         {
             // Check neighbpurs in each direction
 
@@ -68,7 +66,7 @@ namespace Pokimon
             CheckNeighbours(node, x + 1, y);
         }
 
-        private void CheckNeighbours(Node node, int cellX, int cellY)
+        private void CheckNeighbours(Node node, float cellX, float cellY)
         {
             // Returns if x is outside the hor boundaries
             if (cellX < 0 || cellX >= width)
@@ -81,13 +79,20 @@ namespace Pokimon
                 return;
             }
 
-            int index = cellY * width + cellX;
+            Node neighbour;
 
-            Node neighbour = Nodes[index];
-
-            if (neighbour.Cost != int.MaxValue)
+            for(int i = 0; i < Nodes.Length; i++)
             {
-                node.AddNeighbour(neighbour);
+                if(Nodes[i].X == cellX || Nodes[i].Y == cellY)
+                {
+                    neighbour = Nodes[i];
+                    node.AddNeighbour(neighbour);
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("No neighbour found");
+                }
             }
         }
 
@@ -135,7 +140,19 @@ namespace Pokimon
                 return null;
             }
 
-            return Nodes[y * width + x];
+            foreach (Node node in Nodes)
+            {
+                if ((int)node.X == x && (int)node.Y == y)
+                {
+                    return node;
+                }
+                else
+                {
+                    Console.WriteLine("Node not found");
+                }
+            }
+
+            return null;
         }
 
         private void AStar(Node start, Node end)
@@ -175,7 +192,7 @@ namespace Pokimon
         // Manhattan Distance
         private int Heuristic(Node start, Node end)
         {
-            return Math.Abs(start.X - end.X) + Math.Abs(start.Y - end.Y);
+            return (int)(Math.Abs(start.X - end.X) + Math.Abs(start.Y - end.Y));
         }
     }
 }

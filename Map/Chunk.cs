@@ -63,6 +63,10 @@ namespace Pokimon
 
             data = data.Replace("\n\r", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
 
+            sprite = new Sprite(width, height);
+
+            sprite.position = new Vector2(GetIntAttribute(xmlChunk, "x"), GetIntAttribute(xmlChunk, "y"));
+
             string[] StringIds = data.Split(',');
 
             ids = new int[StringIds.Length];

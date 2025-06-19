@@ -11,19 +11,19 @@ namespace Pokimon
         Sprite sprite;
         public DrawLayer DrawLayer { get; }
 
-        public int X { get; }
-        public int Y { get; }
+        public float X { get; }
+        public float Y { get; }
 
         public int Cost { get; }
 
-        public Node(int x, int y, int cost)
+        public Node(float x, float y, int cost)
         {
             Neighbours = new List<Node>();
-            X = x + (int)(Game.Tileset.TileWidth * 0.5f);
-            Y = y + (int)(Game.Tileset.TileHeight * 0.5f);
+            X = x + (Game.Tileset.TileWidth * 0.5f) / Game.Tileset.TileWidth;
+            Y = y + (Game.Tileset.TileHeight * 0.5f) / Game.Tileset.TileHeight;
             Cost = cost;
-            DrawLayer = DrawLayer.UI;
-            sprite = new Sprite(0.5f, 0.5f);
+            DrawLayer = DrawLayer.Foreground;
+            sprite = new Sprite(0.8f, 0.8f);
             sprite.position = new Vector2(X, Y);
             DrawManager.AddItem(this);
         }
@@ -40,7 +40,14 @@ namespace Pokimon
 
         public void Draw()
         {
-            sprite.DrawColor(255, 255, 255);
+            if(Cost < int.MaxValue)
+            {
+                sprite.DrawColor(0, 255, 0);
+            }
+            else
+            {
+                sprite.DrawColor(255, 0, 0);
+            }
         }
     }
 }

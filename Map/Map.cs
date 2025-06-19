@@ -17,6 +17,7 @@ namespace Pokimon
         public PathfindingMap PathfindingMap;
 
         public Tileset Tileset {  get { return tileset; } }
+        public Vector2 PlayerStartPosition { get; set; }
 
         public Map(string xmlFilePath)
         {
@@ -43,6 +44,8 @@ namespace Pokimon
 
             tileset = new Tileset(GetIntAttribute(xmlTileset, "tilewidth"), GetIntAttribute(xmlTileset, "tileheight"), GetIntAttribute(xmlTileset, "columns"), "Assets/TILESET/PixelPackTOPDOWN8BIT.png");
 
+            Game.Tileset = tileset;
+
             // get all the layers in the xml
             XmlNodeList xmlLayers = mapNode.SelectNodes("layer");
             
@@ -54,7 +57,7 @@ namespace Pokimon
                 // create a layer class for each layer found in the xml
                 if (xmlLayers[i].Attributes.GetNamedItem("name").Value == "Pathfinding")
                 {
-                    PathfindingMap = new PathfindingMap(mapWidth, mapHeight, GetCells(xmlLayers[i]));
+                    PathfindingMap = new PathfindingMap(mapWidth, mapHeight, GetCells(xmlLayers[i])); // create the pathfinding map
                 }
                 else
                 {
@@ -63,29 +66,39 @@ namespace Pokimon
             }
         }
 
-        private int[] GetCells(XmlNode xmlLayer)
+        private Dictionary<Vector2, int> GetCells(XmlNode xmlLayer)
         {
             // variables
-            int[] cells;
+            Dictionary<Vector2, int> cells;
             XmlNode data = xmlLayer.SelectSingleNode("data");
             XmlNodeList xmlChunks;
             Chunk[] chunks;
-            
 
             xmlChunks = data.SelectNodes("chunk");
             chunks = new Chunk[xmlChunks.Count];
+            cells = new Dictionary<Vector2, int>();
 
             for (int i = 0; i < xmlChunks.Count; i++)
             {
                 chunks[i] = new Chunk(xmlChunks[i]);
             }
 
-            cells = new int[chunks.Length * chunks[0].Width * chunks[0].Height];
-
+            int counter = 0;
             for (int i = 0; i < chunks.Length; i++)
             {
-                cells[i] = chunks[i].Ids[i];
+                for(int j = 0; j < chunks[i].Ids.Length; j++)
+                {
+                    if (chunks[i].Ids[j] > 2) continue;
+
+                    counter++;
+
+                    Vector2 cellPosition = new Vector2(chunks[i].Position.X + (j % Game.Tileset.TileWidth), chunks[i].Position.Y + (j / Game.Tileset.TileHeight));
+                    
+                    cells[cellPosition] = chunks[i].Ids[j];
+                }
             }
+
+            Console.WriteLine(counter);
 
             return cells;
         }
