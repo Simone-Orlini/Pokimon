@@ -48,11 +48,11 @@ namespace Pokimon
 
             foreach(Node node in Nodes)
             {
-                AddNeighbours(node, node.X, node.Y);
+                AddNeighbours(node, (int)node.X, (int)node.Y);
             }
         }
 
-        private void AddNeighbours(Node node, float x, float y)
+        private void AddNeighbours(Node node, int x, int y)
         {
             // Check neighbpurs in each direction
 
@@ -66,7 +66,7 @@ namespace Pokimon
             CheckNeighbours(node, x + 1, y);
         }
 
-        private void CheckNeighbours(Node node, float cellX, float cellY)
+        private void CheckNeighbours(Node node, int cellX, int cellY)
         {
             // Returns if x is outside the hor boundaries
             if (cellX < 0 || cellX >= width)
@@ -83,15 +83,11 @@ namespace Pokimon
 
             for(int i = 0; i < Nodes.Length; i++)
             {
-                if(Nodes[i].X == cellX || Nodes[i].Y == cellY)
+                if((int)Nodes[i].X == cellX || (int)Nodes[i].Y == cellY)
                 {
                     neighbour = Nodes[i];
                     node.AddNeighbour(neighbour);
                     return;
-                }
-                else
-                {
-                    Console.WriteLine("No neighbour found");
                 }
             }
         }
@@ -102,6 +98,11 @@ namespace Pokimon
 
             Node start = GetNode(startX, startY);
             Node end = GetNode(endX, endY);
+
+            if(start == null || end == null)
+            {
+                return path;
+            }
 
             if (start.Cost == int.MaxValue || end.Cost == int.MaxValue)
             {
@@ -145,10 +146,6 @@ namespace Pokimon
                 if ((int)node.X == x && (int)node.Y == y)
                 {
                     return node;
-                }
-                else
-                {
-                    Console.WriteLine("Node not found");
                 }
             }
 

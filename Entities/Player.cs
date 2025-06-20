@@ -21,7 +21,7 @@ namespace Pokimon
             agent = new Agent(this);
 
             speed = 4;
-            position = new Vector2(2, 30.5f);
+            position = new Vector2(2.5f, 30.5f);
         }
 
         private void InitAnimations()
@@ -44,6 +44,7 @@ namespace Pokimon
                 if (!clickedL)
                 {
                     List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.RelativeMousePosition.X, (int)Game.RelativeMousePosition.Y);
+                    Console.WriteLine(path.Count);
                     agent.SetPath(path);
                     clickedL = true;
                 }

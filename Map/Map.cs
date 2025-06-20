@@ -83,22 +83,15 @@ namespace Pokimon
                 chunks[i] = new Chunk(xmlChunks[i]);
             }
 
-            int counter = 0;
             for (int i = 0; i < chunks.Length; i++)
             {
                 for(int j = 0; j < chunks[i].Ids.Length; j++)
                 {
-                    if (chunks[i].Ids[j] > 2) continue;
-
-                    counter++;
-
-                    Vector2 cellPosition = new Vector2(chunks[i].Position.X + (j % Game.Tileset.TileWidth), chunks[i].Position.Y + (j / Game.Tileset.TileHeight));
+                    Vector2 cellPosition = new Vector2(chunks[i].Position.X + (j % Game.Tileset.TileWidth), chunks[i].Position.Y + (j / Game.Tileset.TileHeight)); // so the player is positioned at the center of the tile instead of the top left corner
                     
                     cells[cellPosition] = chunks[i].Ids[j];
                 }
             }
-
-            Console.WriteLine(counter);
 
             return cells;
         }
