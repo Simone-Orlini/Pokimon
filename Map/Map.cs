@@ -1,7 +1,7 @@
-﻿using Aiv.Fast2D;
-using OpenTK;
+﻿using OpenTK;
 using System;
-using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Xml;
 
 namespace Pokimon
@@ -57,7 +57,7 @@ namespace Pokimon
                 // create a layer class for each layer found in the xml
                 if (xmlLayers[i].Attributes.GetNamedItem("name").Value == "Pathfinding")
                 {
-                    PathfindingMap = new PathfindingMap(mapWidth, mapHeight, GetCells(xmlLayers[i])); // create the pathfinding map
+                    PathfindingMap = new PathfindingMap(mapWidth, mapHeight, GetNodes(xmlLayers[i])); // create the pathfinding map
                 }
                 else
                 {
@@ -66,34 +66,57 @@ namespace Pokimon
             }
         }
 
-        private Dictionary<Vector2, int> GetCells(XmlNode xmlLayer)
+        private int[] GetNodes(XmlNode xmlLayer)
         {
             // variables
-            Dictionary<Vector2, int> cells;
+            int[] nodes;
             XmlNode data = xmlLayer.SelectSingleNode("data");
             XmlNodeList xmlChunks;
             Chunk[] chunks;
 
+            // Create the chunks
             xmlChunks = data.SelectNodes("chunk");
             chunks = new Chunk[xmlChunks.Count];
-            cells = new Dictionary<Vector2, int>();
 
             for (int i = 0; i < xmlChunks.Count; i++)
             {
                 chunks[i] = new Chunk(xmlChunks[i]);
             }
 
-            for (int i = 0; i < chunks.Length; i++)
+            // Create the cell array that will generate all the nodes for the pathfinding
+            nodes = new int[mapWidth * mapHeight];
+            int chunkIndex = 0;
+
+            // Itarate for every line of each chunk
+            for (int i = 0; i < chunks.Length * chunks[chunkIndex].Height; i++)
             {
-                for(int j = 0; j < chunks[i].Ids.Length; j++)
+                chunkIndex = i % chunks.Length; // goes from 0 to the number of chunks
+                int lineIndex = i / chunks.Length;
+
+                // Iterate for each ID of the current line
+                for (int j = 0; j < chunks[chunkIndex].Width; j++)
                 {
-                    Vector2 cellPosition = new Vector2(chunks[i].Position.X + (j % Game.Tileset.TileWidth), chunks[i].Position.Y + (j / Game.Tileset.TileHeight)); // so the player is positioned at the center of the tile instead of the top left corner
-                    
-                    cells[cellPosition] = chunks[i].Ids[j];
+                    int nodeIndex = i * chunks[chunkIndex].Width + j; // takes the index of the current node
+                    int IdIndex = (lineIndex * chunks[chunkIndex].Width + j); // index that allows to read the same line of every chunk (first line of every chunk, then second, then third, and so on)
+
+                    nodes[nodeIndex] = chunks[chunkIndex].Ids[IdIndex]; // takes the same line of all the chunks
                 }
             }
 
-            return cells;
+            using(StreamWriter writer = new StreamWriter("TextFile.txt"))
+            {
+                for (int i = 0; i < nodes.Length; i++)
+                {
+                    if (i % mapWidth == 0 && i != 0)
+                    {
+                        writer.WriteLine();
+                    }
+
+                    writer.Write($"{nodes[i]}, ");
+                }
+            }
+
+            return nodes;
         }
 
         private int GetIntAttribute(XmlNode node, string attrName)

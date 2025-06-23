@@ -20,7 +20,7 @@ namespace Pokimon
 
             agent = new Agent(this);
 
-            speed = 4;
+            speed = 10;
             position = new Vector2(2.5f, 30.5f);
         }
 
@@ -39,19 +39,50 @@ namespace Pokimon
 
         public void Input()
         {
-            if (Game.Window.MouseLeft && MouseInsideScreen())
+            //if (Game.Window.MouseLeft && MouseInsideScreen())
+            //{
+            //    if (!clickedL)
+            //    {
+            //        List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.RelativeMousePosition.X, (int)Game.RelativeMousePosition.Y);
+            //        Console.WriteLine(path.Count);
+            //        agent.SetPath(path);
+            //        clickedL = true;
+            //    }
+            //}
+            //else if (clickedL)
+            //{
+            //    clickedL = false;
+            //}
+
+            if (Game.Window.GetKey(KeyCode.D))
             {
-                if (!clickedL)
-                {
-                    List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.RelativeMousePosition.X, (int)Game.RelativeMousePosition.Y);
-                    Console.WriteLine(path.Count);
-                    agent.SetPath(path);
-                    clickedL = true;
-                }
+                velocity.X = 1;
             }
-            else if (clickedL)
+            else if (Game.Window.GetKey(KeyCode.A))
             {
-                clickedL = false;
+                velocity.X = -1;
+            }
+            else
+            {
+                velocity.X = 0;
+            }
+            
+            if (Game.Window.GetKey(KeyCode.W))
+            {
+                velocity.Y = -1;
+            }
+            else if (Game.Window.GetKey(KeyCode.S))
+            {
+                velocity.Y = 1;
+            }
+            else
+            {
+                velocity.Y = 0;
+            }
+
+            if (velocity.Length > 1)
+            {
+                velocity.Normalize();
             }
         }
 
@@ -86,11 +117,13 @@ namespace Pokimon
 
         public override void Update()
         {
-            agent.Update(speed);
+            //agent.Update(speed);
 
-            Vector2 direction = agent.GetDirection();
+            //Vector2 direction = agent.GetDirection();
 
-            UpdateAnimations(direction);
+            //UpdateAnimations(direction);
+
+            position += velocity * speed * Game.DeltaTime;
 
             animations[currentAnimation].Sprite.position = position;
             animations[currentAnimation].Play();

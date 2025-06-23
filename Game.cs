@@ -1,5 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System.Reflection;
 
 namespace Pokimon
 {
@@ -41,6 +42,8 @@ namespace Pokimon
         {
             while (Window.IsOpened)
             {
+                Window.SetTitle($"{1 / DeltaTime}");
+                
                 if (Window.GetKey(KeyCode.Esc)) return;
 
                 player.Input();

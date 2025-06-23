@@ -51,7 +51,7 @@ namespace Pokimon
 
             DrawManager.AddItem(this);
 
-            CreateMap();
+            CreateChunk();
         }
 
         public Chunk(XmlNode xmlChunk)
@@ -77,7 +77,7 @@ namespace Pokimon
             }
         }
 
-        private void CreateMap()
+        private void CreateChunk()
         {
             //Draw the tiles on the texture
             byte[] newBitmap = new byte[width * height * tileset.TileWidth * tileset.TileHeight * 4];
@@ -86,7 +86,7 @@ namespace Pokimon
             for (int i = 0; i < width * height; i++)
             {
                 int currentID = ids[i] - 1;
-                int startPixel = tileset.Tiles[currentID].TexturePosition;
+                int startPixel = tileset.Tiles[currentID].TexturePosition; // first pixel of the tile in the tileset texture
                 int tilePosX = (i % width) * tileset.TileWidth;
                 int tilePosY = (i / width) * tileset.TileHeight;
 

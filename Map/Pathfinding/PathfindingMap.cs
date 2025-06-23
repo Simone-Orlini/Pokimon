@@ -14,41 +14,37 @@ namespace Pokimon
 
         // Map
         int width, height;
-        Dictionary<Vector2, int> cells;
+        int[] nodes;
 
         public Node[] Nodes { get; }
 
-        public PathfindingMap(int width, int height, Dictionary<Vector2, int> cells)
+        public PathfindingMap(int width, int height, int[] nodes)
         {
             this.width = width;
             this.height = height;
-            this.cells = cells;
+            this.nodes = nodes;
 
-            Nodes = new Node[cells.Count];
-
-            int createdNodeCounter = 0;
+            Nodes = new Node[this.nodes.Length];
 
             // build Nodes from cells
-            foreach(var cell in cells)
+            for(int i = 0; i < this.nodes.Length; i++)
             {
-                float x = cell.Key.X;
-                float y = cell.Key.Y;
+                int x = i % width;
+                int y = i / width;
 
-                if (cell.Value > 2)
+                if (this.nodes[i] > 2)
                 {
-                    Nodes[createdNodeCounter] = new Node(x, y, int.MaxValue);
+                    Nodes[i] = new Node(x, y, int.MaxValue);
                 }
                 else
                 {
-                    Nodes[createdNodeCounter] = new Node(x, y, cell.Value);
+                    Nodes[i] = new Node(x, y, this.nodes[i]);
                 }
-
-                createdNodeCounter++;
             }
 
             foreach(Node node in Nodes)
             {
-                AddNeighbours(node, (int)node.X, (int)node.Y);
+                AddNeighbours(node, node.X, node.Y);
             }
         }
 
@@ -83,7 +79,7 @@ namespace Pokimon
 
             for(int i = 0; i < Nodes.Length; i++)
             {
-                if((int)Nodes[i].X == cellX || (int)Nodes[i].Y == cellY)
+                if(Nodes[i].X == cellX || Nodes[i].Y == cellY)
                 {
                     neighbour = Nodes[i];
                     node.AddNeighbour(neighbour);
@@ -143,7 +139,7 @@ namespace Pokimon
 
             foreach (Node node in Nodes)
             {
-                if ((int)node.X == x && (int)node.Y == y)
+                if (node.X == x && node.Y == y)
                 {
                     return node;
                 }
@@ -189,7 +185,7 @@ namespace Pokimon
         // Manhattan Distance
         private int Heuristic(Node start, Node end)
         {
-            return (int)(Math.Abs(start.X - end.X) + Math.Abs(start.Y - end.Y));
+            return (Math.Abs(start.X - end.X) + Math.Abs(start.Y - end.Y));
         }
     }
 }
