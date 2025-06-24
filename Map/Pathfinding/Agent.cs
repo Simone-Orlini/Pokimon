@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using Aiv.Fast2D;
 using OpenTK;
 
 namespace Pokimon
@@ -14,8 +12,8 @@ namespace Pokimon
 
         Entity owner;
 
-        public int X { get { return Convert.ToInt32(owner.Position.X); } }
-        public int Y { get { return Convert.ToInt32(owner.Position.Y); } }
+        public int X { get { return (int)owner.Position.X; } }
+        public int Y { get { return (int)owner.Position.Y; } }
         public Node Target { get { return target; } set { target = value; } }
 
         Vector2 direction;
@@ -25,7 +23,6 @@ namespace Pokimon
             this.owner = owner;
             target = null;
         }
-
 
         public virtual void SetPath(List<Node> newPath)
         {
@@ -38,7 +35,7 @@ namespace Pokimon
             }
             else if(path.Count > 0)
             {
-                int dist = (int)(Math.Abs(path[0].X - target.X) + Math.Abs(path[0].Y - target.Y));
+                int dist = (Math.Abs(path[0].X - target.X) + Math.Abs(path[0].Y - target.Y));
 
                 if(dist > 1)
                 {
@@ -58,7 +55,7 @@ namespace Pokimon
 
             if(target != null)
             {
-                Vector2 destination = new Vector2(target.X, target.Y);
+                Vector2 destination = new Vector2(target.XOffset, target.YOffset);
                 direction = destination - owner.Position;
                 float distance = direction.Length;
 

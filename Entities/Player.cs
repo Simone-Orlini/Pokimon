@@ -44,6 +44,7 @@ namespace Pokimon
                 if (!clickedL)
                 {
                     List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.RelativeMousePosition.X, (int)Game.RelativeMousePosition.Y);
+                    Console.WriteLine(path.Count);
                     agent.SetPath(path);
                     clickedL = true;
                 }

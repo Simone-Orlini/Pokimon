@@ -24,26 +24,21 @@ namespace Pokimon
             this.height = height;
             this.cells = cells;
 
-            Nodes = new Node[cells.Count];
-
-            int createdNodeCounter = 0;
+            Nodes = new Node[this.cells.Count];
 
             // build Nodes from cells
-            foreach(var cell in cells)
+            foreach(var cell in this.cells)
             {
-                float x = cell.Key.X;
-                float y = cell.Key.Y;
+                int x = (int)cell.Key.X;
+                int y = (int)cell.Key.Y;
 
-                if (cell.Value > 2)
+                if(cell.Value > 2)
                 {
-                    Nodes[createdNodeCounter] = new Node(x, y, int.MaxValue);
-                }
-                else
-                {
-                    Nodes[createdNodeCounter] = new Node(x, y, cell.Value);
+                    Nodes[y * width + x] = new Node(x, y, int.MaxValue);
+                    continue;
                 }
 
-                createdNodeCounter++;
+                Nodes[y * width + x] = new Node(x, y, cell.Value);
             }
 
             foreach(Node node in Nodes)
@@ -52,7 +47,7 @@ namespace Pokimon
             }
         }
 
-        private void AddNeighbours(Node node, float x, float y)
+        private void AddNeighbours(Node node, int x, int y)
         {
             // Check neighbpurs in each direction
 
@@ -66,7 +61,7 @@ namespace Pokimon
             CheckNeighbours(node, x + 1, y);
         }
 
-        private void CheckNeighbours(Node node, float cellX, float cellY)
+        private void CheckNeighbours(Node node, int cellX, int cellY)
         {
             // Returns if x is outside the hor boundaries
             if (cellX < 0 || cellX >= width)
@@ -79,20 +74,11 @@ namespace Pokimon
                 return;
             }
 
-            Node neighbour;
+            Node neighbour = Nodes[cellY * width + cellX];
 
-            for(int i = 0; i < Nodes.Length; i++)
+            if (neighbour.Cost != int.MaxValue)
             {
-                if(Nodes[i].X == cellX || Nodes[i].Y == cellY)
-                {
-                    neighbour = Nodes[i];
-                    node.AddNeighbour(neighbour);
-                    return;
-                }
-                else
-                {
-                    Console.WriteLine("No neighbour found");
-                }
+                node.AddNeighbour(neighbour);
             }
         }
 
@@ -140,19 +126,7 @@ namespace Pokimon
                 return null;
             }
 
-            foreach (Node node in Nodes)
-            {
-                if ((int)node.X == x && (int)node.Y == y)
-                {
-                    return node;
-                }
-                else
-                {
-                    Console.WriteLine("Node not found");
-                }
-            }
-
-            return null;
+            return Nodes[y * width + x];
         }
 
         private void AStar(Node start, Node end)
@@ -192,7 +166,7 @@ namespace Pokimon
         // Manhattan Distance
         private int Heuristic(Node start, Node end)
         {
-            return (int)(Math.Abs(start.X - end.X) + Math.Abs(start.Y - end.Y));
+            return Math.Abs(start.X - end.X) + Math.Abs(start.Y - end.Y);
         }
     }
 }

@@ -11,16 +11,19 @@ namespace Pokimon
         Sprite sprite;
         public DrawLayer DrawLayer { get; }
 
-        public float X { get; }
-        public float Y { get; }
+        public int X { get; }
+        public int Y { get; }
+
+        public float XOffset { get { return X + 0.5f; } }
+        public float YOffset { get { return Y + 0.5f; } }
 
         public int Cost { get; }
 
-        public Node(float x, float y, int cost)
+        public Node(int x, int y, int cost)
         {
             Neighbours = new List<Node>();
-            X = x + (Game.Tileset.TileWidth * 0.5f) / Game.Tileset.TileWidth;
-            Y = y + (Game.Tileset.TileHeight * 0.5f) / Game.Tileset.TileHeight;
+            X = x;
+            Y = y;
             Cost = cost;
             DrawLayer = DrawLayer.Foreground;
             sprite = new Sprite(0.8f, 0.8f);
