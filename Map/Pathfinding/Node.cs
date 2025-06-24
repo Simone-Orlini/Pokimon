@@ -4,11 +4,10 @@ using System.Collections.Generic;
 
 namespace Pokimon
 {
-    public class Node : IDrawable
+    public class Node
     {
         public List<Node> Neighbours;
 
-        Sprite sprite;
         public DrawLayer DrawLayer { get; }
 
         public int X { get; }
@@ -26,9 +25,6 @@ namespace Pokimon
             Y = y;
             Cost = cost;
             DrawLayer = DrawLayer.Foreground;
-            sprite = new Sprite(0.8f, 0.8f);
-            sprite.position = new Vector2(X, Y);
-            DrawManager.AddItem(this);
         }
 
         public void AddNeighbour(Node node)
@@ -39,18 +35,6 @@ namespace Pokimon
         public void RemoveNeighbour(Node node)
         {
             Neighbours.Remove(node);
-        }
-
-        public void Draw()
-        {
-            if(Cost < int.MaxValue)
-            {
-                sprite.DrawColor(0, 255, 0);
-            }
-            else
-            {
-                sprite.DrawColor(255, 0, 0);
-            }
         }
     }
 }
