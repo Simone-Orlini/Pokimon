@@ -12,6 +12,7 @@ namespace Pokimon
         public static Vector2 RelativeMousePosition { get { return Window.MousePosition + new Vector2(Camera.position.X - ScreenCenterX, Camera.position.Y - ScreenCenterY); } }
         public static Vector2 AbsoluteMousePosition { get { return Window.MousePosition; } }
         public static Tileset Tileset { get { return tileset; } set { tileset = value; } }
+        public static Vector2 PlayerStartPosition { get; set; }
 
         public static Map Map;
         public static Player player;
@@ -33,7 +34,7 @@ namespace Pokimon
 
             Map = new Map("Map/XML/map3.tmx");
 
-            player = new Player(Map.PlayerStartPosition);
+            player = new Player(PlayerStartPosition);
             Camera.position = player.Position;
         }
 

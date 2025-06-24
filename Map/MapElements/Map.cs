@@ -1,14 +1,14 @@
-﻿using Aiv.Fast2D;
-using OpenTK;
+﻿using OpenTK;
 using System;
 using System.Collections.Generic;
 using System.Xml;
 
 namespace Pokimon
 {
-    public class Map
+    public class Map : XmlObject
     {
         private Layer[] layers;
+        private ObjectGroup[] objectGroups;
         private int mapWidth; // width in tiles
         private int mapHeight; // height in tiles
 
@@ -17,7 +17,8 @@ namespace Pokimon
         public PathfindingMap PathfindingMap;
 
         public Tileset Tileset {  get { return tileset; } }
-        public Vector2 PlayerStartPosition { get; set; }
+
+        public Vector2 PlayerStart { get; set; }
 
         public Map(string xmlFilePath)
         {
@@ -64,6 +65,16 @@ namespace Pokimon
                     layers[i] = new Layer(tileset, xmlLayers[i]);
                 }
             }
+
+            // create object groups
+            XmlNodeList xmlObjectGroups = mapNode.SelectNodes("objectgroup");
+
+            objectGroups = new ObjectGroup[xmlObjectGroups.Count];
+
+            for(int i = 0; i < xmlObjectGroups.Count; i++)
+            {
+                objectGroups[i] = new ObjectGroup(xmlObjectGroups[i]);
+            }
         }
 
         private Dictionary<Vector2, int> GetCells(XmlNode xmlLayer)
@@ -94,11 +105,6 @@ namespace Pokimon
             }
 
             return cells;
-        }
-
-        private int GetIntAttribute(XmlNode node, string attrName)
-        {
-            return int.Parse(node.Attributes.GetNamedItem(attrName).Value); // value is string, needs parsing
         }
     }
 }

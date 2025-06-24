@@ -1,6 +1,5 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
-using System;
 using System.Collections.Generic;
 
 namespace Pokimon
@@ -21,7 +20,7 @@ namespace Pokimon
             agent = new Agent(this);
 
             speed = 4;
-            position = new Vector2(2, 30.5f);
+            position = startPosition;
         }
 
         private void InitAnimations()

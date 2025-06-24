@@ -1,11 +1,10 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
-using System.Net.NetworkInformation;
 using System.Xml;
 
 namespace Pokimon
 {
-    public class Chunk : IDrawable
+    public class Chunk : XmlObject, IDrawable
     {
         protected int width;
         protected int height;
@@ -108,11 +107,6 @@ namespace Pokimon
             }
 
             texture.Update(newBitmap);
-        }
-
-        protected int GetIntAttribute(XmlNode node, string attrName)
-        {
-            return int.Parse(node.Attributes.GetNamedItem(attrName).Value); // value is string, needs parsing
         }
 
         public void Draw()
