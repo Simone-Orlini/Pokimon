@@ -11,6 +11,7 @@ namespace Pokimon
         private ObjectGroup[] objectGroups;
         private int mapWidth; // width in tiles
         private int mapHeight; // height in tiles
+        private XmlNode mapNode;
 
         private Tileset tileset;
 
@@ -35,7 +36,7 @@ namespace Pokimon
                 Console.WriteLine(e.Message);
             }
 
-            XmlNode mapNode = mapDocument.SelectSingleNode("map"); // take root node map
+            mapNode = mapDocument.SelectSingleNode("map"); // take root node map
 
             // take attributes (to create the map)
             mapWidth = GetIntAttribute(mapNode, "width");
@@ -43,7 +44,7 @@ namespace Pokimon
 
             XmlNode xmlTileset = mapNode.SelectSingleNode("tileset");
 
-            tileset = new Tileset(GetIntAttribute(xmlTileset, "tilewidth"), GetIntAttribute(xmlTileset, "tileheight"), GetIntAttribute(xmlTileset, "columns"), "Assets/TILESET/PixelPackTOPDOWN8BIT.png");
+            tileset = new Tileset(GetIntAttribute(xmlTileset, "tilewidth"), GetIntAttribute(xmlTileset, "tileheight"), GetIntAttribute(xmlTileset, "columns"), GfxManager.GetTexture("tileset"));
 
             Game.Tileset = tileset;
 
@@ -65,13 +66,16 @@ namespace Pokimon
                     layers[i] = new Layer(tileset, xmlLayers[i]);
                 }
             }
+        }
 
+        public void CreateObjectGroups()
+        {
             // create object groups
             XmlNodeList xmlObjectGroups = mapNode.SelectNodes("objectgroup");
 
             objectGroups = new ObjectGroup[xmlObjectGroups.Count];
 
-            for(int i = 0; i < xmlObjectGroups.Count; i++)
+            for (int i = 0; i < xmlObjectGroups.Count; i++)
             {
                 objectGroups[i] = new ObjectGroup(xmlObjectGroups[i]);
             }

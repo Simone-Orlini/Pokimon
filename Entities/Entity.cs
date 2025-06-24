@@ -16,8 +16,9 @@ namespace Pokimon
 
         public Vector2 Velocity { get { return velocity; } set { velocity = value; } }
 
-        protected Entity(DrawLayer layer)
+        protected Entity(Vector2 startPosition, DrawLayer layer = DrawLayer.Playground)
         {
+            position = startPosition;
             drawLayer = layer;
             animations = new Dictionary<string, Animation>();
             DrawManager.AddItem(this);

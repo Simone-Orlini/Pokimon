@@ -16,11 +16,11 @@ namespace Pokimon
         public Texture TilesetTexture { get { return texture; } }
         public Tile[] Tiles { get { return tiles; } }
 
-        public Tileset(int tileWidth, int tileHeight, int cols, string tilesetPath)
+        public Tileset(int tileWidth, int tileHeight, int cols, Texture tilesetTexture)
         {
             this.tileWidth = tileWidth;
             this.tileHeight = tileHeight;
-            texture = new Texture(tilesetPath);
+            texture = tilesetTexture;
             this.cols = cols;
 
             int tileNum = (texture.Width / tileWidth) * (texture.Height / tileHeight);
