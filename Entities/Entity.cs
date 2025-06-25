@@ -1,4 +1,5 @@
-﻿using OpenTK;
+﻿using Aiv.Fast2D;
+using OpenTK;
 using System.Collections.Generic;
 
 namespace Pokimon
@@ -10,6 +11,7 @@ namespace Pokimon
         protected DrawLayer drawLayer;
         protected Vector2 position;
         protected Vector2 velocity;
+        protected bool isActive;
 
         public DrawLayer DrawLayer { get { return drawLayer; } }
         public Vector2 Position { get { return position; } set { position = value; } }
@@ -23,16 +25,20 @@ namespace Pokimon
             animations = new Dictionary<string, Animation>();
             DrawManager.AddItem(this);
             UpdateManager.AddItem(this);
+            isActive = true;
         }
 
         public virtual void Update()
         {
-            
+            animations[currentAnimation].Sprite.position = position;
         }
 
         public virtual void Draw()
         {
-            animations[currentAnimation].Draw();
+            if (isActive)
+            {
+                animations[currentAnimation].Draw();
+            }
         }
     }
 }

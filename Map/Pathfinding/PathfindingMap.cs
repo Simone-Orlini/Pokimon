@@ -31,7 +31,7 @@ namespace Pokimon
                 int x = (int)cell.Key.X;
                 int y = (int)cell.Key.Y;
 
-                if(cell.Value > 2)
+                if (cell.Value > 2)
                 {
                     Nodes[y * width + x] = new Node(x, y, int.MaxValue);
                     continue;

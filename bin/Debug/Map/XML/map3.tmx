@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" infinite="1" nextlayerid="7" nextobjectid="22">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" infinite="1" nextlayerid="7" nextobjectid="23">
  <tileset firstgid="1" name="Tileset" tilewidth="16" tileheight="16" tilecount="480" columns="16">
   <image source="../../Assets/TILESET/PixelPackTOPDOWN8BIT.png" width="256" height="480"/>
  </tileset>
@@ -174,6 +174,9 @@
    <point/>
   </object>
   <object id="21" name="Calloggero" x="504" y="408">
+   <point/>
+  </object>
+  <object id="22" name="DungeonEntrance" x="456" y="344">
    <point/>
   </object>
  </objectgroup>

@@ -1,6 +1,7 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Pokimon
 {
@@ -23,9 +24,6 @@ namespace Pokimon
 
             player = new Player(Map.PlayerStart);
 
-            camera = new Camera(player.Position.X, player.Position.Y);
-            camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
-
             base.Start();
         }
 
@@ -36,8 +34,22 @@ namespace Pokimon
 
         public override void Update()
         {
-            player.Update();
-            camera.position = Vector2.Lerp(camera.position, player.Position, 0.05f);
+            base.Update();
+            if(camera != null)
+            {
+                camera.position = Vector2.Lerp(camera.position, player.Position, 0.05f);
+            }
+
+            if (npcs == null) return;
+
+            for(int i = 0; i < npcs.Count; i++)
+            {
+                Vector2 interactionPosition = npcs[i].Position + new Vector2(0, 1);
+                if(player.Position == interactionPosition)
+                {
+                    player.Interact();
+                }
+            }
         }
     }
 }

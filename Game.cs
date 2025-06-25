@@ -39,7 +39,12 @@ namespace Pokimon
         private static void InitScenes()
         {
             OutsideScene outsideScene = new OutsideScene("Map/XML/map3.tmx");
-            currentScene = outsideScene;
+            DungeonScene dungeon = new DungeonScene("Map/XML/dungeon.tmx");
+
+            outsideScene.NextScene = dungeon;
+            dungeon.NextScene = outsideScene;
+
+            currentScene = dungeon;
         }
 
         private static void LoadAssest()
@@ -48,12 +53,13 @@ namespace Pokimon
 
             // Player animations
             GfxManager.AddAnimation("PlayerIdle", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Idle D.png", 1, 1);
+            GfxManager.AddAnimation("PlayerInteract", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Idle U.png", 1, 1);
             GfxManager.AddAnimation("PlayerWalkU", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk U.png", 4, 8, 1, 1);
             GfxManager.AddAnimation("PlayerWalkD", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk D.png", 4, 8, 1, 1);
             GfxManager.AddAnimation("PlayerWalkR", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk R.png", 4, 8, 1, 1);
             GfxManager.AddAnimation("PlayerWalkL", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk R.png", 4, 8, 1, 1, true);
 
-            // Caloggero
+            // Calloggero
             GfxManager.AddAnimation("CalloggeroIdle", "Assets/SPRITES/Enemies/spritesheets/ENEMIES8bit_Sorcerer Hurt R.png", 1, 1);
         }   
 
@@ -64,6 +70,8 @@ namespace Pokimon
             while (Window.IsOpened)
             {
                 if (Window.GetKey(KeyCode.Esc)) return;
+
+                Window.SetTitle($"{1 / DeltaTime}");
 
                 currentScene.Input();
 

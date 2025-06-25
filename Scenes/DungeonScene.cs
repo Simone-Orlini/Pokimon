@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pokimon
 {
-    public class InsideScene
+    public class DungeonScene : PlayScene
     {
+        public DungeonScene(string xmlFilePath) : base(xmlFilePath)
+        {
+            
+        }
     }
 }

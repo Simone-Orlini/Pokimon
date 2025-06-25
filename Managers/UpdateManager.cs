@@ -21,7 +21,7 @@ namespace Pokimon
             items.Remove(item);
         }
 
-        public static void Draw()
+        public static void Update()
         {
             foreach (IUpdatable item in items)
             {

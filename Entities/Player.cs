@@ -33,6 +33,9 @@ namespace Pokimon
             animations["WalkD"] = GfxManager.GetAnimation("PlayerWalkD");
             animations["WalkR"] = GfxManager.GetAnimation("PlayerWalkR");
             animations["WalkL"] = GfxManager.GetAnimation("PlayerWalkL");
+
+            //Interact
+            animations["Interact"] = GfxManager.GetAnimation("PlayerInteract");
         }
 
         public void Input()
@@ -50,6 +53,11 @@ namespace Pokimon
             {
                 clickedL = false;
             }
+        }
+
+        public void Interact()
+        {
+            currentAnimation = "Interact";
         }
 
         private void UpdateAnimations(Vector2 direction)
@@ -89,7 +97,8 @@ namespace Pokimon
 
             UpdateAnimations(direction);
 
-            animations[currentAnimation].Sprite.position = position;
+            base.Update();
+
             animations[currentAnimation].Play();
         }
     }

@@ -43,6 +43,7 @@ namespace Pokimon
             texture = new Texture(filePath);
             sprite = new Sprite(width, height);
             currentFrame = 0;
+            frameCount = 1;
             frames = new int[1];
             sprite.pivot = new Vector2(width * 0.5f, height * 0.5f);
         }

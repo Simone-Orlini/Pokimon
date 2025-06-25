@@ -70,10 +70,11 @@
     <Compile Include="Map\MapElements\Chunk.cs" />
     <Compile Include="Map\MapElements\Layer.cs" />
     <Compile Include="Map\MapElements\Map.cs" />
-    <Compile Include="Map\Objects\NpcPoint.cs" />
+    <Compile Include="Map\Objects\Pointers\EntrancePoint.cs" />
+    <Compile Include="Map\Objects\Pointers\NpcPoint.cs" />
     <Compile Include="Map\Objects\Object.cs" />
     <Compile Include="Map\Objects\ObjectGroup.cs" />
-    <Compile Include="Map\Objects\PlayerPoint.cs" />
+    <Compile Include="Map\Objects\Pointers\PlayerPoint.cs" />
     <Compile Include="Map\Objects\PointObject.cs" />
     <Compile Include="Map\Pathfinding\Agent.cs" />
     <Compile Include="Map\Pathfinding\Node.cs" />
@@ -85,7 +86,7 @@
     <Compile Include="Map\XmlObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scenes\InsideScene.cs" />
+    <Compile Include="Scenes\DungeonScene.cs" />
     <Compile Include="Scenes\OutsideScene.cs" />
     <Compile Include="Scenes\PlayScene.cs" />
     <Compile Include="Scenes\Scene.cs" />
@@ -93,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Map\XML\dungeon.tmx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Map\XML\map2.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

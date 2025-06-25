@@ -484,3 +484,4 @@ D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\NVorbis.
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\System.ValueTuple.dll
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\NVorbis.xml
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\System.ValueTuple.xml
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\dungeon.tmx

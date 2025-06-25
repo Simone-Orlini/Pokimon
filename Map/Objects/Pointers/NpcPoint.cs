@@ -7,15 +7,15 @@ namespace Pokimon
     {
         Entity entity;
 
+        public Entity Entity { get { return entity; } }
+
         public NpcPoint(XmlNode xmlPoint) : base(xmlPoint)
         {
-            string npcName = xmlPoint.Attributes.GetNamedItem("name").Value;
-
-            if(npcName == "Calloggero")
+            if(name == "Calloggero")
             {
                 entity = new Calloggero(position);
             }
-            else if(npcName == "Princess")
+            else if(name == "Princess")
             {
                 
             }

@@ -11,6 +11,7 @@ namespace Pokimon
         protected Camera camera;
 
         public Vector2 CameraPosition { get { return GetCameraPosition(); } }
+        public Camera Camera { get { return camera; } }
 
         protected Scene()
         {
@@ -19,8 +20,7 @@ namespace Pokimon
 
         public virtual void Start()
         {
-            IsPlaying = true;
-        }
+            IsPlaying = true;        }
 
         public virtual void LoadAssets()
         {
@@ -34,7 +34,7 @@ namespace Pokimon
 
         public virtual void Update()
         {
-
+            UpdateManager.Update();
         }
 
         public virtual void Draw()

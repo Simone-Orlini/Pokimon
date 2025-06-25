@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Aiv.Fast2D;
+using OpenTK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,13 @@ namespace Pokimon
         public OutsideScene(string xmlFilePath) : base(xmlFilePath)
         {
             
+        }
+
+        public override void Start()
+        {
+            base.Start();
+            camera = new Camera(player.Position.X, player.Position.Y);
+            camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
         }
     }
 }
