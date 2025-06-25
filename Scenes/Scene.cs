@@ -20,7 +20,8 @@ namespace Pokimon
 
         public virtual void Start()
         {
-            IsPlaying = true;        }
+            IsPlaying = true;        
+        }
 
         public virtual void LoadAssets()
         {
@@ -45,16 +46,12 @@ namespace Pokimon
         public virtual Scene OnExit()
         {
             IsPlaying = false;
+
             return NextScene;
         }
 
         private Vector2 GetCameraPosition()
         {
-            if(camera == null)
-            {
-                return Vector2.Zero;
-            }
-
             return camera.position;
         }
     }

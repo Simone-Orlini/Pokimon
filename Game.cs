@@ -27,18 +27,12 @@ namespace Pokimon
             Window = new Window(1280, 720, "Pokimon");
             Window.SetDefaultViewportOrthographicSize(15); // 16 pixels -> 3 unit (720 / 16 = 45, 45 / 3 = 15)
 
-            LoadAssest();
-            
-            UpdateManager.Init();
-            DrawManager.Init();
-
-
             InitScenes();
         }
 
         private static void InitScenes()
         {
-            OutsideScene outsideScene = new OutsideScene("Map/XML/map3.tmx");
+            OutsideScene outsideScene = new OutsideScene("Map/XML/map.tmx");
             DungeonScene dungeon = new DungeonScene("Map/XML/dungeon.tmx");
 
             outsideScene.NextScene = dungeon;
@@ -47,31 +41,30 @@ namespace Pokimon
             currentScene = outsideScene;
         }
 
-        private static void LoadAssest()
-        {
-            GfxManager.AddTexture("tileset", "Assets/TILESET/PixelPackTOPDOWN8BIT.png");
-
-            // Player animations
-            GfxManager.AddAnimation("PlayerIdle", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Idle D.png", 1, 1);
-            GfxManager.AddAnimation("PlayerInteract", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Idle U.png", 1, 1);
-            GfxManager.AddAnimation("PlayerWalkU", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk U.png", 4, 8, 1, 1);
-            GfxManager.AddAnimation("PlayerWalkD", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk D.png", 4, 8, 1, 1);
-            GfxManager.AddAnimation("PlayerWalkR", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk R.png", 4, 8, 1, 1);
-            GfxManager.AddAnimation("PlayerWalkL", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk R.png", 4, 8, 1, 1, true);
-
-            // Calloggero
-            GfxManager.AddAnimation("CalloggeroIdle", "Assets/SPRITES/Enemies/spritesheets/ENEMIES8bit_Sorcerer Hurt R.png", 1, 1);
-        }   
-
         public static void Run()
         {
             currentScene.Start();
 
             while (Window.IsOpened)
             {
+                Window.SetTitle($"{1 / DeltaTime}");
+                
                 if (Window.GetKey(KeyCode.Esc)) return;
 
-                Window.SetTitle($"{1 / DeltaTime}");
+                if (!currentScene.IsPlaying)
+                {
+                    Scene nextScene = currentScene.OnExit();
+
+                    if (nextScene != null)
+                    {
+                        currentScene = nextScene;
+                        currentScene.Start();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
 
                 currentScene.Input();
 

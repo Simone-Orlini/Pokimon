@@ -26,7 +26,7 @@
   </data>
  </layer>
  <objectgroup id="3" name="Pointers">
-  <object id="2" name="Princess" x="136" y="24">
+  <object id="2" name="NPCPrincess" x="136" y="24">
    <point/>
   </object>
   <object id="3" name="PlayerStart" x="136" y="232">

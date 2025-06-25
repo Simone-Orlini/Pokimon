@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animation.cs" />
+    <Compile Include="Utilities\Animation.cs" />
     <Compile Include="Entities\Calloggero.cs" />
     <Compile Include="Managers\DrawManager.cs" />
     <Compile Include="Entities\Entity.cs" />
@@ -90,17 +90,14 @@
     <Compile Include="Scenes\OutsideScene.cs" />
     <Compile Include="Scenes\PlayScene.cs" />
     <Compile Include="Scenes\Scene.cs" />
-    <Compile Include="Vector2i.cs" />
+    <Compile Include="Utilities\Vector2i.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Map\XML\dungeon.tmx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Map\XML\map2.tmx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Map\XML\map3.tmx">
+    <None Include="Map\XML\map.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="OpenTK.dll.config" />
@@ -781,9 +778,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\TILESET\PixelPackTOPDOWN8BIT.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Map\XML\map.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

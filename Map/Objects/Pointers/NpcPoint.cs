@@ -11,6 +11,8 @@ namespace Pokimon
 
         public NpcPoint(XmlNode xmlPoint) : base(xmlPoint)
         {
+            name = name.Substring(3);
+
             if(name == "Calloggero")
             {
                 entity = new Calloggero(position);

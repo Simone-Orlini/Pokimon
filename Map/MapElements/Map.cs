@@ -20,8 +20,9 @@ namespace Pokimon
         public int Width { get { return mapWidth; } }
         public int Height { get { return mapHeight; } }
         public Tileset Tileset {  get { return tileset; } }
-
         public Vector2 PlayerStart { get; set; }
+
+        public List<EntrancePoint> EntrancePoints { get; set; }
 
         public Map(string xmlFilePath)
         {
@@ -72,6 +73,8 @@ namespace Pokimon
 
         public void CreateObjectGroups()
         {
+            EntrancePoints = new List<EntrancePoint>();
+
             // create object groups
             XmlNodeList xmlObjectGroups = mapNode.SelectNodes("objectgroup");
 
@@ -81,6 +84,7 @@ namespace Pokimon
             {
                 objectGroups[i] = new ObjectGroup(xmlObjectGroups[i]);
             }
+
         }
 
         private Dictionary<Vector2, int> GetCells(XmlNode xmlLayer)

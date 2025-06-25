@@ -29,6 +29,14 @@ namespace Pokimon
             items[(int)item.DrawLayer].Remove(item);
         }
 
+        public static void ClearAll()
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                items[i].Clear();
+            }
+        }
+
         public static void Draw()
         {
             for(int i = 0; i < (int)DrawLayer.LAST; i++)

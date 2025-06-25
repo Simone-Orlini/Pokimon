@@ -109,10 +109,16 @@ namespace Pokimon
             sounds.Clear();
         }
 
+        public static void ClearAnimations()
+        {
+            animations.Clear();
+        }
+
         public static void ClearAll()
         {
             textures.Clear();
             sounds.Clear();
+            animations.Clear();
         }
     }
 }

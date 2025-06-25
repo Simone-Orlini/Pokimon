@@ -20,7 +20,7 @@ namespace Pokimon
 
             agent = new Agent(this);
 
-            speed = 4;
+            speed = 20; // original is 4
         }
 
         private void InitAnimations()

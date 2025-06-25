@@ -6,7 +6,7 @@ namespace Pokimon
     {
         public EntrancePoint(XmlNode xmlPoint) : base(xmlPoint)
         {
-            
+            Game.CurrentScene.Map.EntrancePoints.Add(this);
         }
     }
 }

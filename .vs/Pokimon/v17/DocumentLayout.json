@@ -3,44 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\sorlini\\Desktop\\Pokimon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\map\\mapelements\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:map\\mapelements\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\map\\xml\\map.tmx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:map\\xml\\map.tmx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\scenes\\playscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:scenes\\playscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\managers\\updatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:managers\\updatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\scenes\\outsidescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:scenes\\outsidescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\scenes\\playscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:scenes\\playscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\map\\mapelements\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\map\\mapelements\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:map\\mapelements\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\map\\objects\\pointers\\playerpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:map\\objects\\pointers\\playerpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\managers\\gfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:managers\\gfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\entities\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:entities\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\map\\objects\\pointers\\entrancepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:map\\objects\\pointers\\entrancepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\map\\objects\\pointers\\npcpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:map\\objects\\pointers\\npcpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,20 +58,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Game.cs",
               "RelativeDocumentMoniker": "Game.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Game.cs",
               "RelativeToolTip": "Game.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwC4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwA4AAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T13:24:42.483Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chunk.cs",
+              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\MapElements\\Chunk.cs",
+              "RelativeDocumentMoniker": "Map\\MapElements\\Chunk.cs",
+              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\MapElements\\Chunk.cs",
+              "RelativeToolTip": "Map\\MapElements\\Chunk.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAwIEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T15:26:11.651Z",
               "EditorCaption": ""
             },
             {
@@ -72,115 +93,153 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GfxManager.cs",
+              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Managers\\GfxManager.cs",
+              "RelativeDocumentMoniker": "Managers\\GfxManager.cs",
+              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Managers\\GfxManager.cs",
+              "RelativeToolTip": "Managers\\GfxManager.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAMwE0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:47:39.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "UpdateManager.cs",
+              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Managers\\UpdateManager.cs",
+              "RelativeDocumentMoniker": "Managers\\UpdateManager.cs",
+              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Managers\\UpdateManager.cs",
+              "RelativeToolTip": "Managers\\UpdateManager.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:41:15.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Scene.cs",
+              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\Scene.cs",
+              "RelativeDocumentMoniker": "Scenes\\Scene.cs",
+              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\Scene.cs",
+              "RelativeToolTip": "Scenes\\Scene.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:19:41.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\MapElements\\Map.cs",
               "RelativeDocumentMoniker": "Map\\MapElements\\Map.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\MapElements\\Map.cs",
               "RelativeToolTip": "Map\\MapElements\\Map.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwDUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T12:42:07.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EntrancePoint.cs",
-              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\EntrancePoint.cs",
-              "RelativeDocumentMoniker": "Map\\Objects\\Pointers\\EntrancePoint.cs",
-              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\EntrancePoint.cs",
-              "RelativeToolTip": "Map\\Objects\\Pointers\\EntrancePoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T22:51:59.288Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Entity.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Entities\\Entity.cs",
               "RelativeDocumentMoniker": "Entities\\Entity.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Entities\\Entity.cs",
               "RelativeToolTip": "Entities\\Entity.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwCAAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwCkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T22:46:48.769Z"
+              "WhenOpened": "2025-06-24T22:46:48.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayScene.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\PlayScene.cs",
               "RelativeDocumentMoniker": "Scenes\\PlayScene.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\PlayScene.cs",
               "RelativeToolTip": "Scenes\\PlayScene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAqwDAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T22:19:12.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NpcPoint.cs",
-              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\NpcPoint.cs",
-              "RelativeDocumentMoniker": "Map\\Objects\\Pointers\\NpcPoint.cs",
-              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\NpcPoint.cs",
-              "RelativeToolTip": "Map\\Objects\\Pointers\\NpcPoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T22:07:52.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlayerPoint.cs",
-              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\PlayerPoint.cs",
-              "RelativeDocumentMoniker": "Map\\Objects\\Pointers\\PlayerPoint.cs",
-              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\PlayerPoint.cs",
-              "RelativeToolTip": "Map\\Objects\\Pointers\\PlayerPoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T22:06:15.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Entities\\Player.cs",
               "RelativeDocumentMoniker": "Entities\\Player.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Entities\\Player.cs",
               "RelativeToolTip": "Entities\\Player.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwCUAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T12:59:40.283Z"
+              "WhenOpened": "2025-06-18T12:59:40.283Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "DungeonScene.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\DungeonScene.cs",
               "RelativeDocumentMoniker": "Scenes\\DungeonScene.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\DungeonScene.cs",
               "RelativeToolTip": "Scenes\\DungeonScene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T20:58:06.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "OutsideScene.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\OutsideScene.cs",
               "RelativeDocumentMoniker": "Scenes\\OutsideScene.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\OutsideScene.cs",
               "RelativeToolTip": "Scenes\\OutsideScene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABUAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T20:57:09.163Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "1f49ce23-16a6-4fa5-990f-b28423d845b9",
+        "Display": 1,
+        "X": -5,
+        "Y": 253,
+        "Width": 1528,
+        "Height": 784,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "map.tmx",
+              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\XML\\map.tmx",
+              "RelativeDocumentMoniker": "Map\\XML\\map.tmx",
+              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\XML\\map.tmx",
+              "RelativeToolTip": "Map\\XML\\map.tmx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-25T14:25:47.717Z",
               "EditorCaption": ""
             }
           ]
