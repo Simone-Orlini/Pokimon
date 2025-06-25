@@ -17,6 +17,8 @@ namespace Pokimon
 
         public PathfindingMap PathfindingMap;
 
+        public int Width { get { return mapWidth; } }
+        public int Height { get { return mapHeight; } }
         public Tileset Tileset {  get { return tileset; } }
 
         public Vector2 PlayerStart { get; set; }

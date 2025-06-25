@@ -24,6 +24,8 @@ namespace Pokimon
 
             player = new Player(Map.PlayerStart);
 
+            camera = new Camera();
+            camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
             base.Start();
         }
 
@@ -35,11 +37,6 @@ namespace Pokimon
         public override void Update()
         {
             base.Update();
-            if(camera != null)
-            {
-                camera.position = Vector2.Lerp(camera.position, player.Position, 0.05f);
-            }
-
             if (npcs == null) return;
 
             for(int i = 0; i < npcs.Count; i++)

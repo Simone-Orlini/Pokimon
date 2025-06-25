@@ -44,7 +44,7 @@ namespace Pokimon
             outsideScene.NextScene = dungeon;
             dungeon.NextScene = outsideScene;
 
-            currentScene = dungeon;
+            currentScene = outsideScene;
         }
 
         private static void LoadAssest()

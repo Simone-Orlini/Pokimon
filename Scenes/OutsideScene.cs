@@ -18,8 +18,13 @@ namespace Pokimon
         public override void Start()
         {
             base.Start();
-            camera = new Camera(player.Position.X, player.Position.Y);
-            camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
+            camera.position = Map.PlayerStart;
+        }
+
+        public override void Update()
+        {
+            base.Update();
+            camera.position = Vector2.Lerp(camera.position, player.Position, 0.05f);
         }
     }
 }
