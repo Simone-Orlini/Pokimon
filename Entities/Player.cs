@@ -15,8 +15,9 @@ namespace Pokimon
         private bool hasKey = false;
         private bool isInteracting = false;
         private float interactionTime = 0;
+        private Npc currentInteractor;
 
-        public bool HasKey { get { return hasKey; } }
+        public bool HasKey { get { return hasKey; } set { hasKey = value; } }
         public bool IsInteracting {  get { return isInteracting; } }
 
         public Player(Vector2 startPosition) : base(startPosition)
@@ -26,7 +27,7 @@ namespace Pokimon
 
             agent = new Agent(this);
 
-            speed = 4;
+            speed = 20;
         }
 
         private void InitAnimations()
@@ -61,25 +62,35 @@ namespace Pokimon
             }
         }
 
+        #region Interaction
         public void Interact(Npc npc)
         {
+            npc.Interact();
             currentAnimation = "Interact";
             isInteracting = true;
             interactionTime = npc.InteractionTime;
+            currentInteractor = npc;
         }
 
         public void Interact(Npc npc, bool giveKey)
         {
+            if (hasKey) return;
+
+            npc.Interact();
             isInteracting = true;
             currentAnimation = "Interact";
             hasKey = giveKey;
             interactionTime = npc.InteractionTime;
+            currentInteractor = npc;
         }
 
         public void StopInteracting()
         {
             isInteracting = false;
+            currentInteractor.StopInteracting();
+            currentInteractor = null;
         }
+        #endregion
 
         private void UpdateAnimations(Vector2 direction)
         {

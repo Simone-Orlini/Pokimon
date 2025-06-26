@@ -87,9 +87,9 @@ namespace Pokimon
 
         }
 
-        public void ChangeCell(Vector2 cellPosition, int oldId, int newId)
+        public void ChangeTile(Vector2 cellPosition, int oldId, int newId)
         {
-            // terribile lo so ma non sapevo come altro fare (pls risparmiate la mia anima :c)
+            // terribile lo so ma non sapevo come altro fare (pls risparmiate la mia anima c:)
             foreach(Layer layer in layers)
             {
                 if(layer == null) continue;
@@ -105,6 +105,7 @@ namespace Pokimon
                                 if(chunk.Ids[i] == oldId)
                                 {
                                     chunk.Ids[i] = newId;
+                                    chunk.CreateMap(); // need to regenerate the entire chunk
                                     return;
                                 }
                             }

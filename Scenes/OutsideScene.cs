@@ -24,6 +24,9 @@ namespace Pokimon
 
             // Calloggero
             GfxManager.AddAnimation("CalloggeroIdle", "Assets/SPRITES/Enemies/spritesheets/ENEMIES8bit_Sorcerer Hurt R.png", 1, 1);
+
+            // Key
+            GfxManager.AddAnimation("key", "Assets/SPRITES/ITEMS/item8BIT_key.png", 1, 1);
         }
 
         public override void Start()
@@ -31,12 +34,15 @@ namespace Pokimon
             LoadAssets();
 
             base.Start();
+
             camera.position = playerState.Position;
+            player.HasKey = playerState.HasKey;
         }
 
         public override Scene OnExit()
         {
             playerState.Position = player.Position + new Vector2(0, 1);
+            playerState.HasKey = player.HasKey;
             return base.OnExit();
         }
 
@@ -62,7 +68,7 @@ namespace Pokimon
 
                 if (lockedEntrance == null) return;
 
-                Map.ChangeCell(lockedEntrance.Position - new Vector2(0.5f, 0.5f), 253, 237);
+                Map.ChangeTile(lockedEntrance.Position - new Vector2(0.5f, 0.5f), 254, 238);
 
                 lockedEntrance.Locked = false;
             }

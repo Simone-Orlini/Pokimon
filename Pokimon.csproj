@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="CameraLimits.cs" />
     <Compile Include="Entities\InteractionBars.cs" />
+    <Compile Include="Entities\Key.cs" />
     <Compile Include="Entities\Npc.cs" />
     <Compile Include="Utilities\Animation.cs" />
     <Compile Include="Entities\Calloggero.cs" />

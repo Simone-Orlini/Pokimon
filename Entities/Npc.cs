@@ -24,14 +24,14 @@ namespace Pokimon
             hasKey = false;
         }
 
-        public void Interact()
+        public virtual void Interact()
         {
             hasInteracted = true;
         }
 
-        public void StopInteracting()
+        public virtual void StopInteracting()
         {
-            hasInteracted = false;
+            
         }
     }
 }

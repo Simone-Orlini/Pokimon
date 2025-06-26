@@ -33,7 +33,7 @@ namespace Pokimon
             // create player and camera
             if(playerState.Position == Vector2.Zero)
             {
-                playerState = new PlayerState(Map.PlayerStart);
+                playerState = new PlayerState(Map.PlayerStart, false);
             }
 
             cameraLimits = new CameraLimits(Map.Width, 0, Map.Height, 0);
@@ -66,8 +66,6 @@ namespace Pokimon
 
             Game.Window.SetCamera(camera);
 
-            System.Console.WriteLine(Game.Window.CurrentCamera);
-
             base.OnExit();
 
             return NextScene;
@@ -97,16 +95,10 @@ namespace Pokimon
                     if (npc.HasKey)
                     {
                         player.Interact(npc, npc.HasKey);
-                        npc.Interact();
                         continue;
                     }
 
                     player.Interact(npc);
-                    npc.Interact();
-                }
-                else if(npc.HasInteracted && player.Position != interactionPosition && !player.IsInteracting)
-                {
-                    npc.StopInteracting();
                 }
             }
         }

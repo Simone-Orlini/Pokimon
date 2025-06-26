@@ -22,6 +22,7 @@ namespace Pokimon
         public virtual Vector2 Position { get { return sprite.position; } }
         public DrawLayer DrawLayer { get { return drawLayer; } }
         public int[] Ids { get { return ids; } }
+        public Texture Texture { get { return texture; } }
 
         public Chunk(Tileset tileset, XmlNode xmlChunk)
         {
@@ -78,7 +79,7 @@ namespace Pokimon
             }
         }
 
-        private void CreateMap()
+        public void CreateMap()
         {
             //Draw the tiles on the texture
             byte[] newBitmap = new byte[width * height * tileset.TileWidth * tileset.TileHeight * 4];
