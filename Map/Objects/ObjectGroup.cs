@@ -19,7 +19,15 @@ namespace Pokimon
 
                 if (objectName == "PlayerStart")
                 {
-                    objects[i] = new PointObject(xmlObjectGroup.ChildNodes[i]);
+                    objects[i] = new PlayerPoint(xmlObjectGroup.ChildNodes[i]);
+                }
+                else if (objectName.Contains("NPC"))
+                {
+                    objects[i] = new NpcPoint(xmlObjectGroup.ChildNodes[i]);
+                }
+                else
+                {
+                    objects[i] = new EntrancePoint(xmlObjectGroup.ChildNodes[i]);
                 }
             }
         }

@@ -1,5 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System;
 using System.Collections.Generic;
 
 namespace Pokimon
@@ -11,8 +12,11 @@ namespace Pokimon
         private Agent agent;
 
         private bool clickedL = false;
+        private bool hasKey = false;
 
-        public Player(Vector2 startPosition) : base(DrawLayer.Playground)
+        public bool HasKey { get { return hasKey; } }
+
+        public Player(Vector2 startPosition) : base(startPosition)
         {
             InitAnimations();
             currentAnimation = "Idle";
@@ -20,20 +24,21 @@ namespace Pokimon
             agent = new Agent(this);
 
             speed = 4;
-            position = startPosition;
         }
 
         private void InitAnimations()
         {
             // Idle
-            animations["Idle"] = new Animation("Idle", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Idle D.png", 1, 1);
+            animations["Idle"] = GfxManager.GetAnimation("PlayerIdle");
 
             //Walk
-            animations["WalkU"] = new Animation("WalkU", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk U.png", 4, 8, 1, 1);
-            animations["WalkD"] = new Animation("WalkD", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk D.png", 4, 8, 1, 1);
-            animations["WalkR"] = new Animation("WalkR", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk R.png", 4, 8, 1, 1);
-            animations["WalkL"] = new Animation("WalkL", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Adventurer Walk R.png", 4, 8, 1, 1);
-            animations["WalkL"].Sprite.FlipX = true;
+            animations["WalkU"] = GfxManager.GetAnimation("PlayerWalkU");
+            animations["WalkD"] = GfxManager.GetAnimation("PlayerWalkD");
+            animations["WalkR"] = GfxManager.GetAnimation("PlayerWalkR");
+            animations["WalkL"] = GfxManager.GetAnimation("PlayerWalkL");
+
+            //Interact
+            animations["Interact"] = GfxManager.GetAnimation("PlayerInteract");
         }
 
         public void Input()
@@ -42,7 +47,7 @@ namespace Pokimon
             {
                 if (!clickedL)
                 {
-                    List<Node> path = Game.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.RelativeMousePosition.X, (int)Game.RelativeMousePosition.Y);
+                    List<Node> path = Game.CurrentScene.Map.PathfindingMap.GetPath(agent.X, agent.Y, (int)Game.RelativeMousePosition.X, (int)Game.RelativeMousePosition.Y);
                     agent.SetPath(path);
                     clickedL = true;
                 }
@@ -51,6 +56,17 @@ namespace Pokimon
             {
                 clickedL = false;
             }
+        }
+
+        public void Interact()
+        {
+            currentAnimation = "Interact";
+        }
+
+        public void Interact(bool giveKey)
+        {
+            currentAnimation = "Interact";
+            hasKey = giveKey;
         }
 
         private void UpdateAnimations(Vector2 direction)
@@ -90,7 +106,8 @@ namespace Pokimon
 
             UpdateAnimations(direction);
 
-            animations[currentAnimation].Sprite.position = position;
+            base.Update();
+
             animations[currentAnimation].Play();
         }
     }

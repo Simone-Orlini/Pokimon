@@ -1,5 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System;
 using System.Xml;
 
 namespace Pokimon
@@ -10,6 +11,7 @@ namespace Pokimon
         protected int height;
         protected Tileset tileset;
         protected DrawLayer drawLayer;
+        protected bool isActive;
 
         private Sprite sprite;
         private Texture texture;
@@ -111,8 +113,21 @@ namespace Pokimon
 
         public void Draw()
         {
+            bool chunkOutsideViewX = (sprite.position.X < Game.CurrentScene.CameraPosition.X - Game.CurrentScene.Camera.pivot.X && sprite.position.X + width < Game.CurrentScene.CameraPosition.X - Game.CurrentScene.Camera.pivot.X) || (sprite.position.X > Game.CurrentScene.CameraPosition.X + Game.CurrentScene.Camera.pivot.X);
+            bool chunkOutsideViewY = (sprite.position.Y < Game.CurrentScene.CameraPosition.Y - Game.CurrentScene.Camera.pivot.Y && sprite.position.Y + height < Game.CurrentScene.CameraPosition.Y - Game.CurrentScene.Camera.pivot.Y) || (sprite.position.Y > Game.CurrentScene.CameraPosition.Y + Game.CurrentScene.Camera.pivot.Y);
+
+            if (chunkOutsideViewY || chunkOutsideViewX)
+            {
+                isActive = false;
+                return;
+            }
+            else
+            {
+                isActive = true;
+            }
+
             sprite.DrawTexture(texture);
-            //sprite.DrawWireframe(new Vector4(255, 255, 255, 255));
+            //sprite.DrawWireframe(255, 255, 255);
         }
     }
 }
