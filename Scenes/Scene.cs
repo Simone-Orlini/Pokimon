@@ -1,5 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System.Net.Http.Headers;
 
 namespace Pokimon
 {
@@ -9,6 +10,7 @@ namespace Pokimon
         public Scene NextScene;
         public Map Map;
         protected Camera camera;
+        protected CameraLimits cameraLimits;
 
         public Vector2 CameraPosition { get { return GetCameraPosition(); } }
         public Camera Camera { get { return camera; } }

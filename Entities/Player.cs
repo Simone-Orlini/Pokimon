@@ -12,6 +12,9 @@ namespace Pokimon
         private Agent agent;
 
         private bool clickedL = false;
+        private bool hasKey = false;
+
+        public bool HasKey { get { return hasKey; } }
 
         public Player(Vector2 startPosition) : base(startPosition)
         {
@@ -20,7 +23,7 @@ namespace Pokimon
 
             agent = new Agent(this);
 
-            speed = 20; // original is 4
+            speed = 4;
         }
 
         private void InitAnimations()
@@ -58,6 +61,12 @@ namespace Pokimon
         public void Interact()
         {
             currentAnimation = "Interact";
+        }
+
+        public void Interact(bool giveKey)
+        {
+            currentAnimation = "Interact";
+            hasKey = giveKey;
         }
 
         private void UpdateAnimations(Vector2 direction)

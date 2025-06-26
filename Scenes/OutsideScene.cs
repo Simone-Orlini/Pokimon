@@ -36,13 +36,16 @@ namespace Pokimon
             LoadAssets();
 
             base.Start();
-            camera.position = Map.PlayerStart;
+            camera.position = playerState.Position;
         }
 
         public override void Update()
         {
             base.Update();
             camera.position = Vector2.Lerp(camera.position, player.Position, 0.05f);
+
+            camera.position.X = MathHelper.Clamp(camera.position.X, cameraLimits.MinX + camera.pivot.X, cameraLimits.MaxX - camera.pivot.X);
+            camera.position.Y = MathHelper.Clamp(camera.position.Y, cameraLimits.MinY + camera.pivot.Y, cameraLimits.MaxY - camera.pivot.Y);
         }
     }
 }

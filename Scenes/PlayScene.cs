@@ -10,6 +10,7 @@ namespace Pokimon
         protected Player player;
         protected string mapPath;
         protected List<Entity> npcs;
+        protected PlayerState playerState;
 
         public PlayScene(string xmlFilePath)
         {
@@ -25,7 +26,14 @@ namespace Pokimon
             
             Map.CreateObjectGroups(); // needs to be done after because some objects need the map fully created
 
-            player = new Player(Map.PlayerStart);
+            if(playerState.Position == Vector2.Zero)
+            {
+                playerState = new PlayerState(Map.PlayerStart);
+            }
+
+            cameraLimits = new CameraLimits(Map.Width, 0, Map.Height, 0);
+
+            player = new Player(playerState.Position);
 
             camera = new Camera();
             camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
@@ -40,6 +48,8 @@ namespace Pokimon
 
         public override Scene OnExit()
         {
+            playerState.Position = player.Position + new Vector2(0, 1);
+
             DrawManager.ClearAll();
             UpdateManager.ClearAll();
             GfxManager.ClearAll();

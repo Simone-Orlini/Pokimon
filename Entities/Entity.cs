@@ -15,8 +15,8 @@ namespace Pokimon
 
         public DrawLayer DrawLayer { get { return drawLayer; } }
         public Vector2 Position { get { return position; } set { position = value; } }
-
         public Vector2 Velocity { get { return velocity; } set { velocity = value; } }
+        public bool IsActive { get { return isActive; } set { isActive = value; } }
 
         protected Entity(Vector2 startPosition, DrawLayer layer = DrawLayer.Playground)
         {

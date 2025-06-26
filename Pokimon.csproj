@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CameraLimits.cs" />
     <Compile Include="Utilities\Animation.cs" />
     <Compile Include="Entities\Calloggero.cs" />
     <Compile Include="Managers\DrawManager.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Scenes\OutsideScene.cs" />
     <Compile Include="Scenes\PlayScene.cs" />
     <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Utilities\PlayerState.cs" />
     <Compile Include="Utilities\Vector2i.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -472,9 +472,6 @@ C:\Users\sorlini\Desktop\Pokimon\obj\Debug\Pokimon.pdb
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Pokimon.exe.config
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Pokimon.exe
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Pokimon.pdb
-D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map.xml
-D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map2.tmx
-D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map3.tmx
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\aiv-audio.dll
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\NVorbis.dll
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\System.ValueTuple.dll
@@ -489,3 +486,4 @@ C:\Users\sorlini\Desktop\Pokimon\bin\Debug\NVorbis.xml
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\System.ValueTuple.xml
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Map\XML\map.tmx
 C:\Users\sorlini\Desktop\Pokimon\obj\Debug\Pokimon.exe.config
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map.tmx
