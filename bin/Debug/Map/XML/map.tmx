@@ -176,7 +176,7 @@
   <object id="21" name="NPCCalloggero" x="504" y="408">
    <point/>
   </object>
-  <object id="22" name="DungeonEntrance" x="456" y="344">
+  <object id="22" name="DungeonEntrance" x="456" y="344" locked ="True">
    <point/>
   </object>
  </objectgroup>

@@ -87,16 +87,42 @@ namespace Pokimon
 
         }
 
+        public void ChangeCell(Vector2 cellPosition, int oldId, int newId)
+        {
+            // terribile lo so ma non sapevo come altro fare (pls risparmiate la mia anima :c)
+            foreach(Layer layer in layers)
+            {
+                if(layer == null) continue;
+
+                foreach(Chunk chunk in layer.Chunks)
+                {
+                    if (cellPosition.X >= chunk.Position.X && cellPosition.X <= chunk.Position.X + chunk.Width)
+                    {
+                        if (cellPosition.Y >= chunk.Position.Y && cellPosition.Y <= chunk.Position.Y + chunk.Height)
+                        {
+                            for(int i = 0; i < chunk.Ids.Length; i++)
+                            {
+                                if(chunk.Ids[i] == oldId)
+                                {
+                                    chunk.Ids[i] = newId;
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         private Dictionary<Vector2, int> GetCells(XmlNode xmlLayer)
         {
             // variables
             Dictionary<Vector2, int> cells;
             XmlNode data = xmlLayer.SelectSingleNode("data");
             XmlNodeList xmlChunks;
-            Chunk[] chunks;
 
             xmlChunks = data.SelectNodes("chunk");
-            chunks = new Chunk[xmlChunks.Count];
+            Chunk[] chunks = new Chunk[xmlChunks.Count];
             cells = new Dictionary<Vector2, int>();
 
             for (int i = 0; i < xmlChunks.Count; i++)

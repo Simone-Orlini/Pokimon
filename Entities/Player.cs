@@ -13,8 +13,11 @@ namespace Pokimon
 
         private bool clickedL = false;
         private bool hasKey = false;
+        private bool isInteracting = false;
+        private float interactionTime = 0;
 
         public bool HasKey { get { return hasKey; } }
+        public bool IsInteracting {  get { return isInteracting; } }
 
         public Player(Vector2 startPosition) : base(startPosition)
         {
@@ -58,15 +61,24 @@ namespace Pokimon
             }
         }
 
-        public void Interact()
+        public void Interact(Npc npc)
         {
             currentAnimation = "Interact";
+            isInteracting = true;
+            interactionTime = npc.InteractionTime;
         }
 
-        public void Interact(bool giveKey)
+        public void Interact(Npc npc, bool giveKey)
         {
+            isInteracting = true;
             currentAnimation = "Interact";
             hasKey = giveKey;
+            interactionTime = npc.InteractionTime;
+        }
+
+        public void StopInteracting()
+        {
+            isInteracting = false;
         }
 
         private void UpdateAnimations(Vector2 direction)
@@ -100,11 +112,22 @@ namespace Pokimon
 
         public override void Update()
         {
-            agent.Update(speed);
+            if (!isInteracting)
+            {
+                agent.Update(speed);
 
-            Vector2 direction = agent.GetDirection();
+                Vector2 direction = agent.GetDirection();
 
-            UpdateAnimations(direction);
+                UpdateAnimations(direction);
+            }
+            else
+            {
+                interactionTime -= Game.DeltaTime;
+                if(interactionTime <= 0)
+                {
+                    StopInteracting();
+                }
+            }
 
             base.Update();
 

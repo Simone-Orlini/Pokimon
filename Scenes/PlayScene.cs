@@ -22,10 +22,15 @@ namespace Pokimon
             DrawManager.Init();
             UpdateManager.Init();
 
+            //create npcs list
+            npcs = new List<Entity>();
+
+           //Create map
             Map = new Map(mapPath);
             
-            Map.CreateObjectGroups(); // needs to be done after because some objects need the map fully created
+            Map.CreateObjectGroups(); // needs to be done after because some objects need the map to be fully created
 
+            // create player and camera
             if(playerState.Position == Vector2.Zero)
             {
                 playerState = new PlayerState(Map.PlayerStart);
@@ -46,10 +51,13 @@ namespace Pokimon
             player.Input();
         }
 
+        public void AddNpc(Entity npc)
+        {
+            npcs.Add(npc);
+        }
+
         public override Scene OnExit()
         {
-            playerState.Position = player.Position + new Vector2(0, 1);
-
             DrawManager.ClearAll();
             UpdateManager.ClearAll();
             GfxManager.ClearAll();
@@ -68,22 +76,37 @@ namespace Pokimon
         public override void Update()
         {
             base.Update();
-            //if (npcs == null) return;
 
-            //for(int i = 0; i < npcs.Count; i++)
-            //{
-            //    Vector2 interactionPosition = npcs[i].Position + new Vector2(0, 1);
-            //    if(player.Position == interactionPosition)
-            //    {
-            //        player.Interact();
-            //    }
-            //}
-
-            for(int i = 0; i < Map.EntrancePoints.Count; i++)
+            // check if player is entering a new scene
+            for (int i = 0; i < Map.EntrancePoints.Count; i++)
             {
-                if(player.Position == Map.EntrancePoints[i].Position)
+                if (player.Position == Map.EntrancePoints[i].Position)
                 {
                     IsPlaying = false;
+                }
+            }
+
+            // player interaction with npcs
+            if (npcs == null || player.IsInteracting) return;
+
+            foreach(Npc npc in npcs)
+            {   
+                Vector2 interactionPosition = npc.Position + new Vector2(0, 1);
+                if (player.Position == interactionPosition && !npc.HasInteracted)
+                {
+                    if (npc.HasKey)
+                    {
+                        player.Interact(npc, npc.HasKey);
+                        npc.Interact();
+                        continue;
+                    }
+
+                    player.Interact(npc);
+                    npc.Interact();
+                }
+                else if(npc.HasInteracted && player.Position != interactionPosition && !player.IsInteracting)
+                {
+                    npc.StopInteracting();
                 }
             }
         }

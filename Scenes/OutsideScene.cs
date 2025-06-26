@@ -1,10 +1,5 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pokimon
 {
@@ -39,6 +34,12 @@ namespace Pokimon
             camera.position = playerState.Position;
         }
 
+        public override Scene OnExit()
+        {
+            playerState.Position = player.Position + new Vector2(0, 1);
+            return base.OnExit();
+        }
+
         public override void Update()
         {
             base.Update();
@@ -46,6 +47,25 @@ namespace Pokimon
 
             camera.position.X = MathHelper.Clamp(camera.position.X, cameraLimits.MinX + camera.pivot.X, cameraLimits.MaxX - camera.pivot.X);
             camera.position.Y = MathHelper.Clamp(camera.position.Y, cameraLimits.MinY + camera.pivot.Y, cameraLimits.MaxY - camera.pivot.Y);
+
+            if (player.HasKey)
+            {
+                EntrancePoint lockedEntrance = null;
+
+                for(int i = 0; i < Map.EntrancePoints.Count; i++)
+                {
+                    if (Map.EntrancePoints[i].Locked)
+                    {
+                        lockedEntrance = Map.EntrancePoints[i];
+                    }
+                }
+
+                if (lockedEntrance == null) return;
+
+                Map.ChangeCell(lockedEntrance.Position - new Vector2(0.5f, 0.5f), 253, 237);
+
+                lockedEntrance.Locked = false;
+            }
         }
     }
 }

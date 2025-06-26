@@ -173,10 +173,10 @@
   <object id="10" name="PlayerStart" x="24" y="488">
    <point/>
   </object>
-  <object id="21" name="NPCCalloggero" x="504" y="408">
+  <object id="21" name="Calloggero" x="504" y="408">
    <point/>
   </object>
-  <object id="22" name="DungeonEntrance" x="456" y="344" locked ="True">
+  <object id="22" name="DungeonEntrance" type="Locked" x="456" y="344">
    <point/>
   </object>
  </objectgroup>

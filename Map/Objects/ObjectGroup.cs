@@ -25,9 +25,19 @@ namespace Pokimon
                 {
                     objects[i] = new NpcPoint(xmlObjectGroup.ChildNodes[i]);
                 }
+                else if(objectName.Contains("Entrance"))
+                {
+                    if (xmlObjectGroup.ChildNodes[i].Attributes.GetNamedItem("locked") != null)
+                    {
+                        bool locked = bool.Parse(xmlObjectGroup.ChildNodes[i].Attributes.GetNamedItem("locked").Value);
+                        objects[i] = new EntrancePoint(xmlObjectGroup.ChildNodes[i], locked);
+                    }
+
+                    objects[i] = new EntrancePoint(xmlObjectGroup.ChildNodes[i]);
+                }
                 else
                 {
-                    objects[i] = new EntrancePoint(xmlObjectGroup.ChildNodes[i]);
+                    Console.WriteLine("Object not found");
                 }
             }
         }
