@@ -85,18 +85,22 @@ namespace Pokimon
         {
             for(int i = 0; i < Nodes.Length; i++)
             {
-                if (Nodes[i].XOffset == nodePosition.X)
+                if (Nodes[i].XOffset == nodePosition.X && Nodes[i].YOffset == nodePosition.Y)
                 {
-                    if(Nodes[i].YOffset == nodePosition.Y)
-                    {
-                        Nodes[i].ChangeCost(newValue);
+                    Nodes[i].ChangeCost(newValue);
 
-                        for(int j = 0; j < Nodes[i].Neighbours.Count; j++)
+                    for(int j = 0; j < Nodes[i].Neighbours.Count; j++)
+                    {
+                        if(newValue < int.MaxValue)
                         {
                             Nodes[i].Neighbours[j].AddNeighbour(Nodes[i]);
                         }
-                        break;
+                        else
+                        {
+                            Nodes[i].Neighbours[j].RemoveNeighbour(Nodes[i]);
+                        }
                     }
+                    break;
                 }
             }
         }

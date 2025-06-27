@@ -19,7 +19,7 @@ namespace Pokimon
             }
             else if(name == "Princess")
             {
-                
+                entity = new Princess(position);
             }
         }
     }

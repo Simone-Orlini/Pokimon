@@ -1,7 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Pokimon
 {
@@ -11,6 +10,7 @@ namespace Pokimon
         protected string mapPath;
         protected List<Entity> npcs;
         protected PlayerState playerState;
+        protected InteractionBar interactionBar;
 
         public PlayScene(string xmlFilePath)
         {
@@ -38,10 +38,13 @@ namespace Pokimon
 
             cameraLimits = new CameraLimits(Map.Width, 0, Map.Height, 0);
 
-            player = new Player(playerState.Position);
+            player = playerState.LoadState(player);
 
             camera = new Camera();
             camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
+
+            // Create UI
+            interactionBar = new InteractionBar();
 
             base.Start();
         }
@@ -87,11 +90,16 @@ namespace Pokimon
             // player interaction with npcs
             if (npcs == null || player.IsInteracting) return;
 
+            if (!player.IsInteracting)
+                interactionBar.Deactivate();
+
             foreach(Npc npc in npcs)
             {   
                 Vector2 interactionPosition = npc.Position + new Vector2(0, 1);
                 if (player.Position == interactionPosition && !npc.HasInteracted)
                 {
+                    interactionBar.Activate();
+
                     if (npc.HasKey)
                     {
                         player.Interact(npc, npc.HasKey);

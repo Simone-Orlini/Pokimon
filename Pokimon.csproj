@@ -59,9 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CameraLimits.cs" />
-    <Compile Include="Entities\InteractionBars.cs" />
+    <Compile Include="Entities\InteractionBar.cs" />
     <Compile Include="Entities\Key.cs" />
     <Compile Include="Entities\Npc.cs" />
+    <Compile Include="Entities\Princess.cs" />
     <Compile Include="Utilities\Animation.cs" />
     <Compile Include="Entities\Calloggero.cs" />
     <Compile Include="Managers\DrawManager.cs" />

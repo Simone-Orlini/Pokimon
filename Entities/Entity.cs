@@ -17,6 +17,8 @@ namespace Pokimon
         public Vector2 Position { get { return position; } set { position = value; } }
         public Vector2 Velocity { get { return velocity; } set { velocity = value; } }
         public bool IsActive { get { return isActive; } set { isActive = value; } }
+        public virtual float HalfWidth { get { return animations[currentAnimation].Sprite.Width * 0.5f; } }
+        public virtual float HalfHeight { get { return animations[currentAnimation].Sprite.Height * 0.5f; } }
 
         protected Entity(Vector2 startPosition, DrawLayer layer = DrawLayer.Playground)
         {
@@ -26,6 +28,11 @@ namespace Pokimon
             DrawManager.AddItem(this);
             UpdateManager.AddItem(this);
             isActive = true;
+        }
+
+        protected virtual void InitAnimations()
+        {
+
         }
 
         public virtual void Update()

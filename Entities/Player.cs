@@ -27,10 +27,10 @@ namespace Pokimon
 
             agent = new Agent(this);
 
-            speed = 20;
+            speed = 4;
         }
 
-        private void InitAnimations()
+        protected override void InitAnimations()
         {
             // Idle
             animations["Idle"] = GfxManager.GetAnimation("PlayerIdle");

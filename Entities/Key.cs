@@ -7,6 +7,11 @@ namespace Pokimon
     {
         public Key(Vector2 startPosition) : base(startPosition)
         {
+            InitAnimations();
+        }
+
+        protected override void InitAnimations()
+        {
             animations["key"] = GfxManager.GetAnimation("key");
             currentAnimation = "key";
         }

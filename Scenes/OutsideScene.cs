@@ -25,6 +25,9 @@ namespace Pokimon
             // Calloggero
             GfxManager.AddAnimation("CalloggeroIdle", "Assets/SPRITES/Enemies/spritesheets/ENEMIES8bit_Sorcerer Hurt R.png", 1, 1);
 
+            // Princess
+            GfxManager.AddAnimation("PrincessIdle", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Princess Idle D.png", 1, 1);
+
             // Key
             GfxManager.AddAnimation("key", "Assets/SPRITES/ITEMS/item8BIT_key.png", 1, 1);
         }
@@ -35,14 +38,12 @@ namespace Pokimon
 
             base.Start();
 
-            camera.position = playerState.Position;
-            player.HasKey = playerState.HasKey;
+            camera.position = player.Position;
         }
 
         public override Scene OnExit()
         {
-            playerState.Position = player.Position + new Vector2(0, 1);
-            playerState.HasKey = player.HasKey;
+            playerState.SaveState(player, player.Position + new Vector2(0, 1));
             return base.OnExit();
         }
 
