@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\sorlini\\Desktop\\Pokimon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\entities\\interactionbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:entities\\interactionbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|c:\\users\\sorlini\\desktop\\pokimon\\entities\\princess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\entities\\princess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:entities\\princess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:managers\\updatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|C:\\Users\\sorlini\\Desktop\\Pokimon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63C58F53-9F8C-4268-9C23-AD09B7CFEB07}|Pokimon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -70,17 +66,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Game.cs",
               "RelativeDocumentMoniker": "Game.cs",
               "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Game.cs",
               "RelativeToolTip": "Game.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBEAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T13:24:42.483Z",
               "IsPinned": true,
@@ -100,8 +96,7 @@
               "RelativeToolTip": "Entities\\Princess.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T12:30:17.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T12:30:17.817Z"
             },
             {
               "$type": "Document",
@@ -113,8 +108,7 @@
               "RelativeToolTip": "Entities\\Entity.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAArwBYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T22:46:48.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T22:46:48.769Z"
             },
             {
               "$type": "Document",
@@ -126,8 +120,7 @@
               "RelativeToolTip": "Scenes\\PlayScene.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAcwF0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T22:19:12.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T22:19:12.961Z"
             },
             {
               "$type": "Document",
@@ -139,12 +132,11 @@
               "RelativeToolTip": "Entities\\Player.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAIwBYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T12:59:40.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T12:59:40.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "DungeonScene.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Scenes\\DungeonScene.cs",
               "RelativeDocumentMoniker": "Scenes\\DungeonScene.cs",
@@ -152,8 +144,7 @@
               "RelativeToolTip": "Scenes\\DungeonScene.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T20:58:06.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T20:58:06.844Z"
             },
             {
               "$type": "Document",
@@ -165,12 +156,11 @@
               "RelativeToolTip": "Scenes\\OutsideScene.cs",
               "ViewState": "AgIAACgAAAAAAAAAAADwvzkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T20:57:09.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T20:57:09.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "EntrancePoint.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\EntrancePoint.cs",
               "RelativeDocumentMoniker": "Map\\Objects\\Pointers\\EntrancePoint.cs",
@@ -178,12 +168,11 @@
               "RelativeToolTip": "Map\\Objects\\Pointers\\EntrancePoint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T10:48:05.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T10:48:05.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Key.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Entities\\Key.cs",
               "RelativeDocumentMoniker": "Entities\\Key.cs",
@@ -191,12 +180,11 @@
               "RelativeToolTip": "Entities\\Key.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T08:52:29.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T08:52:29.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "NpcPoint.cs",
               "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Map\\Objects\\Pointers\\NpcPoint.cs",
               "RelativeDocumentMoniker": "Map\\Objects\\Pointers\\NpcPoint.cs",
@@ -204,8 +192,7 @@
               "RelativeToolTip": "Map\\Objects\\Pointers\\NpcPoint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:11:45.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T09:11:45.719Z"
             },
             {
               "$type": "Document",
@@ -217,8 +204,7 @@
               "RelativeToolTip": "Entities\\Calloggero.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:03:02.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T09:03:02.209Z"
             },
             {
               "$type": "Document",
@@ -230,21 +216,7 @@
               "RelativeToolTip": "Managers\\UpdateManager.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAkwCIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T14:41:15.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InteractionBar.cs",
-              "DocumentMoniker": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Entities\\InteractionBar.cs",
-              "RelativeDocumentMoniker": "Entities\\InteractionBar.cs",
-              "ToolTip": "C:\\Users\\sorlini\\Desktop\\Pokimon\\Entities\\InteractionBar.cs*",
-              "RelativeToolTip": "Entities\\InteractionBar.cs*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA9wCQAAACbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T10:30:35.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T14:41:15.121Z"
             },
             {
               "$type": "Document",
@@ -256,8 +228,7 @@
               "RelativeToolTip": "Entities\\Npc.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAqwBcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:21:34.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T09:21:34.459Z"
             },
             {
               "$type": "Document",
@@ -269,8 +240,7 @@
               "RelativeToolTip": "Utilities\\PlayerState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:20:52.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T08:20:52.097Z"
             }
           ]
         }
