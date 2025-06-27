@@ -14,7 +14,7 @@ namespace Pokimon
         public float XOffset { get { return X + 0.5f; } }
         public float YOffset { get { return Y + 0.5f; } }
 
-        public int Cost { get; }
+        public int Cost { get; private set; }
 
         public Node(int x, int y, int cost)
         {
@@ -23,6 +23,13 @@ namespace Pokimon
             Y = y;
             Cost = cost;
             DrawLayer = DrawLayer.Foreground;
+        }
+
+        public void ChangeCost(int newCost)
+        {
+            if(Cost == newCost) return;
+
+            Cost = newCost;
         }
 
         public void AddNeighbour(Node node)

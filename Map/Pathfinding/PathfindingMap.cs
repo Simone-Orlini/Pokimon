@@ -81,6 +81,26 @@ namespace Pokimon
             }
         }
 
+        public void ChangeNode(Vector2 nodePosition, int newValue)
+        {
+            for(int i = 0; i < Nodes.Length; i++)
+            {
+                if (Nodes[i].XOffset == nodePosition.X)
+                {
+                    if(Nodes[i].YOffset == nodePosition.Y)
+                    {
+                        Nodes[i].ChangeCost(newValue);
+
+                        for(int j = 0; j < Nodes[i].Neighbours.Count; j++)
+                        {
+                            Nodes[i].Neighbours[j].AddNeighbour(Nodes[i]);
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
         public List<Node> GetPath(int startX, int startY, int endX, int endY)
         {
             List<Node> path = new List<Node>();

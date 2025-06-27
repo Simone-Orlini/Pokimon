@@ -69,6 +69,7 @@ namespace Pokimon
                 if (lockedEntrance == null) return;
 
                 Map.ChangeTile(lockedEntrance.Position - new Vector2(0.5f, 0.5f), 254, 238);
+                Map.PathfindingMap.ChangeNode(lockedEntrance.Position, 2);
 
                 lockedEntrance.Locked = false;
             }
