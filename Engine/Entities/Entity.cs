@@ -73,7 +73,6 @@ namespace Pokimon
             if (isActive)
             {
                 sprite.DrawTexture(texture, (int)textureOffsetX, (int)textureOffsetY, (int)sprite.Width * 16, (int)sprite.Height * 16);
-                sprite.DrawWireframe(255, 255, 255);
             }
         }
     }

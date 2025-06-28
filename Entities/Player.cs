@@ -27,7 +27,7 @@ namespace Pokimon
 
             agent = new Agent(this);
 
-            speed = 20;
+            speed = 4;
         }
 
         protected override void InitAnimations()
