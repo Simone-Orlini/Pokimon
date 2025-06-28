@@ -5,15 +5,14 @@ namespace Pokimon
 {
     public class Key : Entity
     {
-        public Key(Vector2 startPosition) : base(startPosition)
+        public Key(Vector2 startPosition) : base(startPosition, "key", spriteWidth : 1, spriteHeight : 1)
         {
-            InitAnimations();
+
         }
 
-        protected override void InitAnimations()
+        public override void Draw()
         {
-            animations["key"] = GfxManager.GetAnimation("key");
-            currentAnimation = "key";
+            base.Draw();
         }
     }
 }

@@ -28,6 +28,10 @@ namespace Pokimon
 
             // Princess
             GfxManager.AddAnimation("PrincessIdle", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Princess Idle D.png", 1, 1);
+
+            //Sounds
+            GfxManager.AddAudioClip("bgMusic", "Assets/MUSIC/1BITTopDownMusics - Track 02 (1BIT Dark Cave).wav");
+            AudioManager.AddAudioSource("bgMusicSource", 0.2f);
         }
 
         public override void Start()
@@ -35,6 +39,12 @@ namespace Pokimon
             LoadAssets();
             base.Start();
             camera.position = new Vector2(Map.Width * 0.5f, Map.Height * 0.5f);
+        }
+
+        public override void Update()
+        {
+            base.Update();
+            AudioManager.PlayClip("bgMusicSource", "bgMusic", true);
         }
     }
 }

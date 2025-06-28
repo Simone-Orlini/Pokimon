@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Pokimon
 {
-    public class Player : Entity
+    public class Player : Character
     {
         private int speed;
 
@@ -27,7 +27,7 @@ namespace Pokimon
 
             agent = new Agent(this);
 
-            speed = 4;
+            speed = 20;
         }
 
         protected override void InitAnimations()
@@ -82,6 +82,7 @@ namespace Pokimon
             hasKey = giveKey;
             interactionTime = npc.InteractionTime;
             currentInteractor = npc;
+            AudioManager.PlayClip("sfxSource", "pickUp");
         }
 
         public void StopInteracting()

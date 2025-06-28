@@ -22,7 +22,7 @@ namespace Pokimon
             DrawManager.Init();
             UpdateManager.Init();
 
-            //create npcs list
+            //create lists
             npcs = new List<Entity>();
 
            //Create map
@@ -40,6 +40,18 @@ namespace Pokimon
 
             player = playerState.LoadState(player);
 
+            if (player.HasKey)
+            {
+                foreach(EntrancePoint entrance in Map.EntrancePoints)
+                {
+                    if (entrance.Locked)
+                    {
+                        entrance.Locked = false;
+                        OpenDoor(entrance.Position);
+                    }
+                }
+            }
+
             camera = new Camera();
             camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
 
@@ -54,24 +66,20 @@ namespace Pokimon
             player.Input();
         }
 
-        public void AddNpc(Entity npc)
-        {
-            npcs.Add(npc);
-        }
-
         public override Scene OnExit()
         {
+            AudioManager.StopPlaying();
+
             DrawManager.ClearAll();
             UpdateManager.ClearAll();
             GfxManager.ClearAll();
+            AudioManager.ClearAll();
 
             camera = null;
 
             Game.Window.SetCamera(camera);
 
-            base.OnExit();
-
-            return NextScene;
+            return base.OnExit();
         }
 
         public override void Update()
@@ -81,7 +89,7 @@ namespace Pokimon
             // check if player is entering a new scene
             for (int i = 0; i < Map.EntrancePoints.Count; i++)
             {
-                if (player.Position == Map.EntrancePoints[i].Position)
+                if (player.Position == Map.EntrancePoints[i].Position && !Map.EntrancePoints[i].Locked)
                 {
                     IsPlaying = false;
                 }
@@ -109,6 +117,17 @@ namespace Pokimon
                     player.Interact(npc);
                 }
             }
+        }
+
+        public void AddNpc(Entity npc)
+        {
+            npcs.Add(npc);
+        }
+
+        protected void OpenDoor(Vector2 doorPosition)
+        {
+            Map.ChangeTile(doorPosition - new Vector2(0.5f, 0.5f), 254, 238);
+            Map.PathfindingMap.ChangeNode(doorPosition, 2);
         }
     }
 }

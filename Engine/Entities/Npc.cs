@@ -3,7 +3,7 @@ using OpenTK;
 
 namespace Pokimon
 {
-    public class Npc : Entity
+    public class Npc : Character
     {
         protected float interactionTime;
         protected bool hasInteracted;
@@ -27,6 +27,7 @@ namespace Pokimon
         public virtual void Interact()
         {
             hasInteracted = true;
+            hasKey = false;
         }
 
         public virtual void StopInteracting()

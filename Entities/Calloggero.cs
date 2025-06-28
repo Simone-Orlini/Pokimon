@@ -36,6 +36,7 @@ namespace Pokimon
         public override void StopInteracting()
         {
             key.IsActive = false;
+            hasKey = false;
         }
     }
 }

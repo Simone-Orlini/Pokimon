@@ -477,7 +477,6 @@ D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\NVorbis.
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\System.ValueTuple.dll
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\NVorbis.xml
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\System.ValueTuple.xml
-D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\dungeon.tmx
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Map\XML\dungeon.tmx
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\aiv-audio.dll
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\NVorbis.dll
@@ -486,4 +485,7 @@ C:\Users\sorlini\Desktop\Pokimon\bin\Debug\NVorbis.xml
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\System.ValueTuple.xml
 C:\Users\sorlini\Desktop\Pokimon\bin\Debug\Map\XML\map.tmx
 C:\Users\sorlini\Desktop\Pokimon\obj\Debug\Pokimon.exe.config
-D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Map\XML\map.tmx
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\XML\map.tmx
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\XML\dungeon.tmx
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\FONTS\font.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\FONTS\textSheet.png

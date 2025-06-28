@@ -34,7 +34,7 @@ namespace Pokimon
 
             for(int i = 0; i < frameCount; i++)
             {
-                frames[i] = i * 16;
+                frames[i] = i * frameW * 16; // change from unit to pixel
             }
             sprite.pivot = new Vector2(frameW * 0.5f, frameH * 0.5f);
         }
@@ -69,7 +69,7 @@ namespace Pokimon
 
         public void Draw()
         {
-            sprite.DrawTexture(texture, frames[currentFrame], 0, 16, 16);
+            sprite.DrawTexture(texture, frames[currentFrame], 0, (int)sprite.Width * 16, (int)sprite.Height * 16); // converts to pixels (1 unit -> 16 pixels)
         }
     }
 }

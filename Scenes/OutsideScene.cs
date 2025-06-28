@@ -1,5 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
+using System.Net;
 
 namespace Pokimon
 {
@@ -12,6 +13,7 @@ namespace Pokimon
 
         public override void LoadAssets()
         {
+            // Tileset
             GfxManager.AddTexture("tileset", "Assets/TILESET/PixelPackTOPDOWN8BIT.png");
 
             // Player animations
@@ -29,7 +31,13 @@ namespace Pokimon
             GfxManager.AddAnimation("PrincessIdle", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Princess Idle D.png", 1, 1);
 
             // Key
-            GfxManager.AddAnimation("key", "Assets/SPRITES/ITEMS/item8BIT_key.png", 1, 1);
+            GfxManager.AddTexture("key", "Assets/SPRITES/ITEMS/item8BIT_key.png");
+
+            // Sounds
+            GfxManager.AddAudioClip("pickUp", "Assets/SFX/Pickup01.wav");
+            GfxManager.AddAudioClip("bgMusic", "Assets/MUSIC/1BITTopDownMusics - Track 01 (1BIT Adventure).wav");
+            AudioManager.AddAudioSource("sfxSource", 0.2f);
+            AudioManager.AddAudioSource("bgMusicSource", 0.2f);
         }
 
         public override void Start()
@@ -67,13 +75,19 @@ namespace Pokimon
                     }
                 }
 
-                if (lockedEntrance == null) return;
+                if (lockedEntrance == null)
+                {
 
-                Map.ChangeTile(lockedEntrance.Position - new Vector2(0.5f, 0.5f), 254, 238);
-                Map.PathfindingMap.ChangeNode(lockedEntrance.Position, 2);
+                }
+                else if (player.Position == lockedEntrance.Position + new Vector2(0, 1))
+                {
+                    OpenDoor(lockedEntrance.Position);
 
-                lockedEntrance.Locked = false;
+                    lockedEntrance.Locked = false;
+                }
             }
+
+            AudioManager.PlayClip("bgMusicSource", "bgMusic", true);
         }
     }
 }

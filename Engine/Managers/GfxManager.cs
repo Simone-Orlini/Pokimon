@@ -6,11 +6,11 @@ using Aiv.Audio;
 
 namespace Pokimon
 {
-    internal static class GfxManager
+    public static class GfxManager
     {
         private static Dictionary<string, Texture> textures;
-        private static Dictionary<string, AudioClip> sounds;
         private static Dictionary<string, Animation> animations;
+        private static Dictionary<string, AudioClip> sounds;
 
         static GfxManager()
         {
@@ -21,6 +21,8 @@ namespace Pokimon
 
         public static Texture AddTexture(string name, string filePath)
         {
+            if (textures.ContainsKey(name)) return textures[name];
+
             Texture texture = new Texture(filePath);
 
             if (texture != null)
@@ -32,6 +34,8 @@ namespace Pokimon
 
         public static Animation AddAnimation(string name, string filePath, int frameCount, float animationSpeed, int frameW, int frameH, bool flipped = false)
         {
+            if (animations.ContainsKey(name)) return animations[name];
+
             animations[name] = new Animation(name, filePath, frameCount, animationSpeed, frameW, frameH);
 
             if (flipped)
@@ -44,6 +48,8 @@ namespace Pokimon
 
         public static Animation AddAnimation(string name, string filePath, int frameW, int frameH, bool flipped = false)
         {
+            if (animations.ContainsKey(name)) return animations[name];
+
             animations[name] = new Animation(name, filePath, frameW, frameH);
 
             if (flipped)
@@ -56,6 +62,8 @@ namespace Pokimon
 
         public static AudioClip AddAudioClip(string name, string filePath)
         {
+            if (sounds.ContainsKey(name)) return sounds[name];
+
             AudioClip ac = new AudioClip(filePath);
 
             if (ac != null)

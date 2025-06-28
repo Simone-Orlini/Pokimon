@@ -6,17 +6,9 @@ namespace Pokimon
 {
     public class InteractionBar : Entity
     {
-
-        private Sprite sprite;
-
-        public override float HalfWidth => sprite.Width * 0.5f;
-        public override float HalfHeight => sprite.Height * 0.5f;
-
-        public InteractionBar() : base(Vector2.Zero, DrawLayer.UI)
+        public InteractionBar() : base(Vector2.Zero, spriteWidth: (int)(Game.Window.OrthoWidth * 1.2f), spriteHeight : (int)(Game.Window.OrthoHeight * 0.3f), layer : DrawLayer.UI)
         {
-            float height = Game.Window.OrthoHeight * 0.3f;
-            sprite = new Sprite(Game.Window.OrthoWidth * 1.2f, height);
-            sprite.pivot = new Vector2(0, height);
+            sprite.pivot = new Vector2(0, sprite.Height);
             Deactivate();
         }
 
@@ -34,7 +26,7 @@ namespace Pokimon
         {
             if (isActive)
             {
-                sprite.position = new Vector2(Game.CurrentScene.CameraPosition.X - HalfWidth, Game.CurrentScene.CameraPosition.Y + Game.ScreenCenterY * 0.9f);
+                sprite.position = new Vector2(Game.CurrentScene.CameraPosition.X - HalfWidth, Game.CurrentScene.CameraPosition.Y + Game.ScreenCenterY);
             }
         }
 

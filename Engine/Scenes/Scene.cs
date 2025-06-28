@@ -1,4 +1,5 @@
-﻿using Aiv.Fast2D;
+﻿using Aiv.Audio;
+using Aiv.Fast2D;
 using OpenTK;
 using System.Net.Http.Headers;
 
@@ -11,6 +12,7 @@ namespace Pokimon
         public Map Map;
         protected Camera camera;
         protected CameraLimits cameraLimits;
+        protected AudioDevice ear;
 
         public Vector2 CameraPosition { get { return GetCameraPosition(); } }
         public Camera Camera { get { return camera; } }
