@@ -489,3 +489,4 @@ D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\XML\map.
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\XML\dungeon.tmx
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\FONTS\font.png
 D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\Assets\FONTS\textSheet.png
+D:\cose desktop\programmazione\Programmi\VisualStudio\Pokimon\bin\Debug\dialogues.txt

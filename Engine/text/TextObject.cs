@@ -1,8 +1,6 @@
 ﻿using OpenTK;
-using OpenTK.Graphics.OpenGL;
-using System;
+using Aiv.Fast2D;
 using System.Collections.Generic;
-using System.Globalization;
 
 namespace Pokimon
 {
@@ -12,7 +10,7 @@ namespace Pokimon
         protected Font font;
         protected string text;
         protected bool isActive;
-        protected int hSpace; // Horizontal space between characters
+        protected float hSpace; // Horizontal space between characters
 
         protected Vector2 position;
 
@@ -20,7 +18,9 @@ namespace Pokimon
 
         public bool IsActive { get { return isActive; } set { isActive = value; UpdateCharStatus(); } }
 
-        public TextObject(Vector2 position, string textString = "", Font font = null, int horizontalSpacing = 0)
+        public Vector2 Position { get { return position; } set {  position = value; } }
+
+        public TextObject(Vector2 position, string textString = "", Font font = null, float horizontalSpacing = 0)
         {
             this.position = position;
             hSpace = horizontalSpacing;
@@ -49,27 +49,52 @@ namespace Pokimon
             text = newText;
             int numChars = text.Length;
 
-            int charX = (int)position.X;
-            int charY = (int)position.Y;
+            float charX = position.X;
+            float charY = position.Y;
 
-            for(int i = 0; i <  numChars; i++)
+            for(int i = 0; i < numChars; i++)
             {
                 char c = text[i]; //string as char array
 
-                if(i >= sprites.Count)
+                if (i >= sprites.Count)
                 {
-                    //i is greater than last char index
-                    TextChar tc = new TextChar(new Vector2(charX, charY), c, font);
-                    tc.IsActive = isActive;
-                    sprites.Add(tc);
+                    while (i >= sprites.Count)
+                    {
+                        //i is greater than last char index
+                        TextChar tc = new TextChar(new Vector2(charX, charY), c, font);
+                        tc.IsActive = isActive;
+                        sprites.Add(tc);
+                    }
                 }
-                else if(c != sprites[i].Character)
+                else if (c != sprites[i].Character)
                 {
                     //change character
                     sprites[i].Character = c;
                 }
 
-                charX += (int)sprites[i].HalfWidth * 2 + hSpace; //compute next TextChar position
+                charX += sprites[i].HalfWidth * sprites[i].Scale.X + hSpace; //compute next TextChar position
+
+                if(charX >= Game.CurrentScene.CameraPosition.X + Game.ScreenCenterX)
+                {
+                    do
+                    {
+                        if (text[i] == ' ')
+                        {
+                            DrawManager.RemoveItem(sprites[i]);
+                            sprites.RemoveAt(i);
+                            break;
+                        }
+
+                        c = text[i];
+                        DrawManager.RemoveItem(sprites[i]);
+                        sprites.RemoveAt(i);
+                        i--;
+                    }
+                    while (c != ' ');
+
+                    charX = position.X;
+                    charY += 1;
+                }
             }
 
             //check for extra TextChar to remove
@@ -81,6 +106,12 @@ namespace Pokimon
 
                 sprites.RemoveRange(startCut, charsToRemove);
             }
+        }
+
+        public void ClearText()
+        {
+            sprites.Clear();
+            text = "";
         }
 
         protected void UpdateCharStatus()

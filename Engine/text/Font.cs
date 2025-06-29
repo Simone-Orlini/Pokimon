@@ -18,7 +18,7 @@ namespace Pokimon
         public Font(string texureName, string texturePath, int numColumns, int firstCharASCIIvalue, float charWidth, float charHeight)
         {
             TextureName = texureName;
-            Texture = GfxManager.AddTexture(texureName, texturePath);
+            Texture = GfxManager.AddFontTexture(texureName, texturePath);
             numCol = numColumns;
             firstVal = firstCharASCIIvalue;
             CharacterWidth = charWidth;

@@ -15,6 +15,7 @@ namespace Pokimon
         public void Activate()
         {
             isActive = true;
+            position = new Vector2(Game.CurrentScene.CameraPosition.X - HalfWidth, Game.CurrentScene.CameraPosition.Y + Game.ScreenCenterY);
         }
 
         public void Deactivate()
@@ -22,18 +23,11 @@ namespace Pokimon
             isActive = false;
         }
 
-        public override void Update()
-        {
-            if (isActive)
-            {
-                sprite.position = new Vector2(Game.CurrentScene.CameraPosition.X - HalfWidth, Game.CurrentScene.CameraPosition.Y + Game.ScreenCenterY);
-            }
-        }
-
         public override void Draw()
         {
             if (isActive)
             {
+                sprite.position = position;
                 sprite.DrawColor(0, 0, 0);
             }
         }

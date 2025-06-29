@@ -17,22 +17,21 @@ namespace Pokimon
 
         public TextChar(Vector2 spritePosition, char character, Font f) : base(spritePosition, f.TextureName, spriteWidth : f.CharacterWidth, spriteHeight : f.CharacterHeight, layer : DrawLayer.UI)
         {
+            texture = GfxManager.GetFontTexture(f.TextureName);
+
             sprite.pivot = Vector2.Zero;
+            sprite.scale = new Vector2(0.3f, 0.3f);
             font = f;
 
             Character = character;
-
-            IsActive = true;
-
-            DrawManager.AddItem(this);
         }
 
         protected void ComputeOffset()
         {
             Vector2 textureOffset = font.GetOffset(character);
 
-            textureOffsetX = (int)textureOffset.X;
-            textureOffsetY = (int)textureOffset.Y;
+            textureOffsetX = textureOffset.X;
+            textureOffsetY = textureOffset.Y;
         }
     }
 }

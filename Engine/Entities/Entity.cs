@@ -1,6 +1,5 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
-using System.Collections.Generic;
 
 namespace Pokimon
 {
@@ -24,6 +23,7 @@ namespace Pokimon
         public bool IsActive { get { return isActive; } set { isActive = value; } }
         public virtual float HalfWidth { get { return sprite.Width * 0.5f; } }
         public virtual float HalfHeight { get { return sprite.Height * 0.5f; } }
+        public Vector2 Scale { get { return sprite.scale; } }
         #endregion
 
         protected Entity(Vector2 startPosition, string textureName, float textureOffsetX = 0, float textureOffsetY = 0, float spriteWidth = 0, float spriteHeight = 0, DrawLayer layer = DrawLayer.Playground)
@@ -72,7 +72,14 @@ namespace Pokimon
         {
             if (isActive)
             {
-                sprite.DrawTexture(texture, (int)textureOffsetX, (int)textureOffsetY, (int)sprite.Width * 16, (int)sprite.Height * 16);
+                // Conversions from unit to pixels
+                float spriteW = sprite.Width * 16;
+                float spriteH =  sprite.Height * 16;
+                float textureOffX = textureOffsetX * 16;
+                float textureOffY = textureOffsetY * 16;
+
+                sprite.DrawTexture(texture, (int)textureOffX, (int)textureOffY, (int)spriteW, (int)spriteH);
+                //sprite.DrawWireframe(255, 255, 255);
             }
         }
     }

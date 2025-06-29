@@ -10,7 +10,10 @@ namespace Pokimon
         protected string mapPath;
         protected List<Entity> npcs;
         protected PlayerState playerState;
-        protected InteractionBar interactionBar;
+
+        public List<Entity> Npcs { get { return npcs; } }
+        public Vector2 PlayerPosition { get { return player.Position; } }
+        public bool FixedCamera { get; protected set; }
 
         public PlayScene(string xmlFilePath)
         {
@@ -52,11 +55,10 @@ namespace Pokimon
                 }
             }
 
+            DialogueManager.Init(this);
+
             camera = new Camera();
             camera.pivot = new Vector2(Game.ScreenCenterX, Game.ScreenCenterY);
-
-            // Create UI
-            interactionBar = new InteractionBar();
 
             base.Start();
         }
@@ -72,7 +74,7 @@ namespace Pokimon
 
             DrawManager.ClearAll();
             UpdateManager.ClearAll();
-            GfxManager.ClearAll();
+            GfxManager.ClearAllButFonts();
             AudioManager.ClearAll();
 
             camera = null;
@@ -98,16 +100,11 @@ namespace Pokimon
             // player interaction with npcs
             if (npcs == null || player.IsInteracting) return;
 
-            if (!player.IsInteracting)
-                interactionBar.Deactivate();
-
             foreach(Npc npc in npcs)
             {   
                 Vector2 interactionPosition = npc.Position + new Vector2(0, 1);
                 if (player.Position == interactionPosition && !npc.HasInteracted)
                 {
-                    interactionBar.Activate();
-
                     if (npc.HasKey)
                     {
                         player.Interact(npc, npc.HasKey);

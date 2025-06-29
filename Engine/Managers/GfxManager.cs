@@ -9,12 +9,14 @@ namespace Pokimon
     public static class GfxManager
     {
         private static Dictionary<string, Texture> textures;
+        private static Dictionary<string, Texture> fontTextures;
         private static Dictionary<string, Animation> animations;
         private static Dictionary<string, AudioClip> sounds;
 
         static GfxManager()
         {
             textures = new Dictionary<string, Texture>();
+            fontTextures = new Dictionary<string, Texture>();
             sounds = new Dictionary<string, AudioClip>();
             animations = new Dictionary<string, Animation>();
         }
@@ -28,6 +30,19 @@ namespace Pokimon
             if (texture != null)
             {
                 textures[name] = texture;
+            }
+            return texture;
+        }
+
+        public static Texture AddFontTexture(string name, string filePath)
+        {
+            if (fontTextures.ContainsKey(name)) return fontTextures[name];
+
+            Texture texture = new Texture(filePath);
+
+            if (texture != null)
+            {
+                fontTextures[name] = texture;
             }
             return texture;
         }
@@ -85,6 +100,18 @@ namespace Pokimon
             return texture;
         }
 
+        public static Texture GetFontTexture(string name)
+        {
+            Texture texture = null;
+
+            if (fontTextures.ContainsKey(name))
+            {
+                texture = fontTextures[name];
+            }
+
+            return texture;
+        }
+
         public static Animation GetAnimation(string name)
         {
             if (animations.ContainsKey(name))
@@ -122,9 +149,22 @@ namespace Pokimon
             animations.Clear();
         }
 
+        public static void ClearFonts()
+        {
+            fontTextures.Clear();
+        }
+
+        public static void ClearAllButFonts()
+        {
+            textures.Clear();
+            sounds.Clear();
+            animations.Clear();
+        }
+
         public static void ClearAll()
         {
             textures.Clear();
+            fontTextures.Clear();
             sounds.Clear();
             animations.Clear();
         }

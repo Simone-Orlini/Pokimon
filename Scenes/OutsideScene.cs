@@ -46,6 +46,7 @@ namespace Pokimon
 
             base.Start();
 
+            FixedCamera = false;
             camera.position = player.Position;
         }
 

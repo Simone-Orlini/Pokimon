@@ -9,11 +9,11 @@ namespace Pokimon
 
         private Key key;
 
-        public Calloggero(Vector2 startPosition) : base(startPosition)
+        public Calloggero(Vector2 startPosition) : base(startPosition, "Calloggero")
         {
             InitAnimations();
 
-            interactionTime = 3;
+            interactionTime = 10;
             hasKey = true;
             key = new Key(Vector2.Zero);
             key.IsActive = false;
@@ -35,6 +35,7 @@ namespace Pokimon
 
         public override void StopInteracting()
         {
+            base.StopInteracting();
             key.IsActive = false;
             hasKey = false;
         }

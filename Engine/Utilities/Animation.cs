@@ -69,7 +69,10 @@ namespace Pokimon
 
         public void Draw()
         {
-            sprite.DrawTexture(texture, frames[currentFrame], 0, (int)sprite.Width * 16, (int)sprite.Height * 16); // converts to pixels (1 unit -> 16 pixels)
+            float spriteW = sprite.Width * 16;
+            float spriteH = sprite.Height * 16;
+
+            sprite.DrawTexture(texture, frames[currentFrame], 0, (int)spriteW, (int)spriteH); // converts to pixels (1 unit -> 16 pixels)
         }
     }
 }

@@ -5,10 +5,10 @@ namespace Pokimon
 {
     public class Princess : Npc
     {
-        public Princess(Vector2 startPosition) : base(startPosition)
+        public Princess(Vector2 startPosition) : base(startPosition, "Princess Scianel")
         {
             InitAnimations();
-            interactionTime = 5;
+            interactionTime = 15;
         }
 
         protected override void InitAnimations()

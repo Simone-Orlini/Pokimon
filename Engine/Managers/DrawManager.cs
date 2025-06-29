@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Pokimon
 {
@@ -35,6 +36,35 @@ namespace Pokimon
             {
                 items[i].Clear();
             }
+        }
+
+        public static bool Contains(IDrawable item, DrawLayer layer)
+        {
+            for(int i = 0; i < items[(int)layer].Count; i++)
+            {
+                if (items[(int)layer][i] == item)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool Contains(IDrawable item)
+        {
+            foreach(List<IDrawable> layer in items)
+            {
+                for (int i = 0; i < layer.Count; i++)
+                {
+                    if (items[i] == item)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         public static void Draw()

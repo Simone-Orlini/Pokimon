@@ -66,8 +66,8 @@ namespace Pokimon
         public void Interact(Npc npc)
         {
             npc.Interact();
-            currentAnimation = "Interact";
             isInteracting = true;
+            currentAnimation = "Interact";
             interactionTime = npc.InteractionTime;
             currentInteractor = npc;
         }
@@ -135,7 +135,7 @@ namespace Pokimon
             else
             {
                 interactionTime -= Game.DeltaTime;
-                if(interactionTime <= 0)
+                if (interactionTime <= 0)
                 {
                     StopInteracting();
                 }
