@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Pokimon
 {
-    public class Player : Entity
+    public class Player : Character
     {
         private int speed;
 
@@ -13,8 +13,12 @@ namespace Pokimon
 
         private bool clickedL = false;
         private bool hasKey = false;
+        private bool isInteracting = false;
+        private float interactionTime = 0;
+        private Npc currentInteractor;
 
-        public bool HasKey { get { return hasKey; } }
+        public bool HasKey { get { return hasKey; } set { hasKey = value; } }
+        public bool IsInteracting {  get { return isInteracting; } }
 
         public Player(Vector2 startPosition) : base(startPosition)
         {
@@ -26,7 +30,7 @@ namespace Pokimon
             speed = 4;
         }
 
-        private void InitAnimations()
+        protected override void InitAnimations()
         {
             // Idle
             animations["Idle"] = GfxManager.GetAnimation("PlayerIdle");
@@ -58,16 +62,36 @@ namespace Pokimon
             }
         }
 
-        public void Interact()
+        #region Interaction
+        public void Interact(Npc npc)
         {
+            npc.Interact();
+            isInteracting = true;
             currentAnimation = "Interact";
+            interactionTime = npc.InteractionTime;
+            currentInteractor = npc;
         }
 
-        public void Interact(bool giveKey)
+        public void Interact(Npc npc, bool giveKey)
         {
+            if (hasKey) return;
+
+            npc.Interact();
+            isInteracting = true;
             currentAnimation = "Interact";
             hasKey = giveKey;
+            interactionTime = npc.InteractionTime;
+            currentInteractor = npc;
+            AudioManager.PlayClip("sfxSource", "pickUp");
         }
+
+        public void StopInteracting()
+        {
+            isInteracting = false;
+            currentInteractor.StopInteracting();
+            currentInteractor = null;
+        }
+        #endregion
 
         private void UpdateAnimations(Vector2 direction)
         {
@@ -100,11 +124,22 @@ namespace Pokimon
 
         public override void Update()
         {
-            agent.Update(speed);
+            if (!isInteracting)
+            {
+                agent.Update(speed);
 
-            Vector2 direction = agent.GetDirection();
+                Vector2 direction = agent.GetDirection();
 
-            UpdateAnimations(direction);
+                UpdateAnimations(direction);
+            }
+            else
+            {
+                interactionTime -= Game.DeltaTime;
+                if (interactionTime <= 0)
+                {
+                    StopInteracting();
+                }
+            }
 
             base.Update();
 

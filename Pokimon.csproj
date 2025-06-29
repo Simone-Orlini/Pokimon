@@ -58,54 +58,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CameraLimits.cs" />
-    <Compile Include="Utilities\Animation.cs" />
+    <Compile Include="Engine\Managers\AudioManager.cs" />
+    <Compile Include="Engine\Utilities\CameraLimits.cs" />
+    <Compile Include="Engine\Entities\Character.cs" />
+    <Compile Include="Engine\Managers\DialogueManager.cs" />
+    <Compile Include="Entities\Key.cs" />
+    <Compile Include="Engine\Entities\Npc.cs" />
+    <Compile Include="Entities\Princess.cs" />
+    <Compile Include="GUI\InteractionBar.cs" />
+    <Compile Include="Engine\text\Font.cs" />
+    <Compile Include="Engine\text\FontManager.cs" />
+    <Compile Include="Engine\text\TextChar.cs" />
+    <Compile Include="Engine\text\TextObject.cs" />
+    <Compile Include="Engine\Utilities\Animation.cs" />
     <Compile Include="Entities\Calloggero.cs" />
-    <Compile Include="Managers\DrawManager.cs" />
-    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Engine\Managers\DrawManager.cs" />
+    <Compile Include="Engine\Entities\Entity.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Managers\GfxManager.cs" />
-    <Compile Include="Managers\Interfaces\IUpdatable.cs" />
-    <Compile Include="Managers\Interfaces\IDrawable.cs" />
-    <Compile Include="Managers\UpdateManager.cs" />
-    <Compile Include="Map\MapElements\Chunk.cs" />
-    <Compile Include="Map\MapElements\Layer.cs" />
-    <Compile Include="Map\MapElements\Map.cs" />
-    <Compile Include="Map\Objects\Pointers\EntrancePoint.cs" />
-    <Compile Include="Map\Objects\Pointers\NpcPoint.cs" />
-    <Compile Include="Map\Objects\Object.cs" />
-    <Compile Include="Map\Objects\ObjectGroup.cs" />
-    <Compile Include="Map\Objects\Pointers\PlayerPoint.cs" />
-    <Compile Include="Map\Objects\PointObject.cs" />
-    <Compile Include="Map\Pathfinding\Agent.cs" />
-    <Compile Include="Map\Pathfinding\Node.cs" />
-    <Compile Include="Map\Pathfinding\PathfindingMap.cs" />
-    <Compile Include="Map\Pathfinding\PriorityQueue.cs" />
-    <Compile Include="Map\MapElements\Tile.cs" />
-    <Compile Include="Map\MapElements\Tileset.cs" />
+    <Compile Include="Engine\Managers\GfxManager.cs" />
+    <Compile Include="Engine\Managers\Interfaces\IUpdatable.cs" />
+    <Compile Include="Engine\Managers\Interfaces\IDrawable.cs" />
+    <Compile Include="Engine\Managers\UpdateManager.cs" />
+    <Compile Include="Engine\Map\MapElements\Chunk.cs" />
+    <Compile Include="Engine\Map\MapElements\Layer.cs" />
+    <Compile Include="Engine\Map\MapElements\Map.cs" />
+    <Compile Include="Engine\Map\Objects\Pointers\EntrancePoint.cs" />
+    <Compile Include="Engine\Map\Objects\Pointers\NpcPoint.cs" />
+    <Compile Include="Engine\Map\Objects\Object.cs" />
+    <Compile Include="Engine\Map\Objects\ObjectGroup.cs" />
+    <Compile Include="Engine\Map\Objects\Pointers\PlayerPoint.cs" />
+    <Compile Include="Engine\Map\Objects\PointObject.cs" />
+    <Compile Include="Engine\Map\Pathfinding\Agent.cs" />
+    <Compile Include="Engine\Map\Pathfinding\Node.cs" />
+    <Compile Include="Engine\Map\Pathfinding\PathfindingMap.cs" />
+    <Compile Include="Engine\Map\Pathfinding\PriorityQueue.cs" />
+    <Compile Include="Engine\Map\MapElements\Tile.cs" />
+    <Compile Include="Engine\Map\MapElements\Tileset.cs" />
     <Compile Include="Entities\Player.cs" />
-    <Compile Include="Map\XmlObject.cs" />
+    <Compile Include="Engine\Map\XmlObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scenes\DungeonScene.cs" />
     <Compile Include="Scenes\OutsideScene.cs" />
-    <Compile Include="Scenes\PlayScene.cs" />
-    <Compile Include="Scenes\Scene.cs" />
-    <Compile Include="Utilities\PlayerState.cs" />
-    <Compile Include="Utilities\Vector2i.cs" />
+    <Compile Include="Engine\Scenes\PlayScene.cs" />
+    <Compile Include="Engine\Scenes\Scene.cs" />
+    <Compile Include="Engine\Utilities\PlayerState.cs" />
+    <Compile Include="Engine\Utilities\Vector2i.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Map\XML\dungeon.tmx">
+    <None Include="XML\dungeon.tmx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Map\XML\map.tmx">
+    <None Include="XML\map.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\FONTS\font.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\MUSIC\1BITTopDownMusics - Track 01 %281BIT Adventure%29.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -779,7 +793,13 @@
     <Content Include="Assets\SPRITES\ITEMS\item8BIT_sword.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\FONTS\textSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\TILESET\PixelPackTOPDOWN8BIT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dialogues.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

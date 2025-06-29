@@ -1,10 +1,6 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 
 namespace Pokimon
 {
@@ -17,6 +13,7 @@ namespace Pokimon
 
         public override void LoadAssets()
         {
+            // Tileset
             GfxManager.AddTexture("tileset", "Assets/TILESET/PixelPackTOPDOWN8BIT.png");
 
             // Player animations
@@ -29,6 +26,18 @@ namespace Pokimon
 
             // Calloggero
             GfxManager.AddAnimation("CalloggeroIdle", "Assets/SPRITES/Enemies/spritesheets/ENEMIES8bit_Sorcerer Hurt R.png", 1, 1);
+
+            // Princess
+            GfxManager.AddAnimation("PrincessIdle", "Assets/SPRITES/HEROS/spritesheets/HEROS8Bit_Princess Idle D.png", 1, 1);
+
+            // Key
+            GfxManager.AddTexture("key", "Assets/SPRITES/ITEMS/item8BIT_key.png");
+
+            // Sounds
+            GfxManager.AddAudioClip("pickUp", "Assets/SFX/Pickup01.wav");
+            GfxManager.AddAudioClip("bgMusic", "Assets/MUSIC/1BITTopDownMusics - Track 01 (1BIT Adventure).wav");
+            AudioManager.AddAudioSource("sfxSource", 0.2f);
+            AudioManager.AddAudioSource("bgMusicSource", 0.2f);
         }
 
         public override void Start()
@@ -36,7 +45,15 @@ namespace Pokimon
             LoadAssets();
 
             base.Start();
-            camera.position = playerState.Position;
+
+            FixedCamera = false;
+            camera.position = player.Position;
+        }
+
+        public override Scene OnExit()
+        {
+            playerState.SaveState(player, player.Position + new Vector2(0, 1));
+            return base.OnExit();
         }
 
         public override void Update()
@@ -46,6 +63,32 @@ namespace Pokimon
 
             camera.position.X = MathHelper.Clamp(camera.position.X, cameraLimits.MinX + camera.pivot.X, cameraLimits.MaxX - camera.pivot.X);
             camera.position.Y = MathHelper.Clamp(camera.position.Y, cameraLimits.MinY + camera.pivot.Y, cameraLimits.MaxY - camera.pivot.Y);
+
+            if (player.HasKey)
+            {
+                EntrancePoint lockedEntrance = null;
+
+                for(int i = 0; i < Map.EntrancePoints.Count; i++)
+                {
+                    if (Map.EntrancePoints[i].Locked)
+                    {
+                        lockedEntrance = Map.EntrancePoints[i];
+                    }
+                }
+
+                if (lockedEntrance == null)
+                {
+
+                }
+                else if (player.Position == lockedEntrance.Position + new Vector2(0, 1))
+                {
+                    OpenDoor(lockedEntrance.Position);
+
+                    lockedEntrance.Locked = false;
+                }
+            }
+
+            AudioManager.PlayClip("bgMusicSource", "bgMusic", true);
         }
     }
 }

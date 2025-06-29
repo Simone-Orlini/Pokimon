@@ -25,15 +25,17 @@ namespace Pokimon
         public static void Init()
         {
             Window = new Window(1280, 720, "Pokimon");
-            Window.SetDefaultViewportOrthographicSize(15); // 16 pixels -> 3 unit (720 / 16 = 45, 45 / 3 = 15)
+            Window.SetDefaultViewportOrthographicSize(16); // 16 pixels -> 3 units (720 / 16 = 45, 45 / 3 = 15) + 1 to render a full chunk (16x16)
+
+            FontManager.AddFont("font", "Assets/FONTS/textSheet.png", 15, 32, 1.25f, 1.25f);
 
             InitScenes();
         }
 
         private static void InitScenes()
         {
-            OutsideScene outsideScene = new OutsideScene("Map/XML/map.tmx");
-            DungeonScene dungeon = new DungeonScene("Map/XML/dungeon.tmx");
+            OutsideScene outsideScene = new OutsideScene("XML/map.tmx");
+            DungeonScene dungeon = new DungeonScene("XML/dungeon.tmx");
 
             outsideScene.NextScene = dungeon;
             dungeon.NextScene = outsideScene;
@@ -47,7 +49,7 @@ namespace Pokimon
 
             while (Window.IsOpened)
             {
-                Window.SetTitle($"{1 / DeltaTime}");
+                Window.SetTitle($"FPS: {(int)(1 / DeltaTime)}");
                 
                 if (Window.GetKey(KeyCode.Esc)) return;
 
