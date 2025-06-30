@@ -58,7 +58,7 @@ namespace Pokimon
 
                 if (i >= sprites.Count)
                 {
-                    while (i >= sprites.Count)
+                    while (i >= sprites.Count) // When going on a new line needs to get back to the original number of letters
                     {
                         //i is greater than last char index
                         TextChar tc = new TextChar(new Vector2(charX, charY), c, font);
@@ -74,26 +74,27 @@ namespace Pokimon
 
                 charX += sprites[i].HalfWidth * sprites[i].Scale.X + hSpace; //compute next TextChar position
 
-                if(charX >= Game.CurrentScene.CameraPosition.X + Game.ScreenCenterX)
+                if(charX >= Game.CurrentScene.CameraPosition.X + Game.ScreenCenterX) // Go on a new line
                 {
                     do
                     {
-                        if (text[i] == ' ')
+                        if (text[i] == ' ') // checks to see if the character is space (so it can stop here)
                         {
                             DrawManager.RemoveItem(sprites[i]);
                             sprites.RemoveAt(i);
                             break;
                         }
 
+                        // Remove the letter
                         c = text[i];
                         DrawManager.RemoveItem(sprites[i]);
                         sprites.RemoveAt(i);
-                        i--;
+                        i--; // decrease i so that the loop can go back to the first letter of the word (when this loop is over) and re-print it on the new line
                     }
                     while (c != ' ');
 
                     charX = position.X;
-                    charY += 1;
+                    charY += 1; // Change line
                 }
             }
 

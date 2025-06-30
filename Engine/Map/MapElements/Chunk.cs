@@ -1,6 +1,5 @@
 ﻿using Aiv.Fast2D;
 using OpenTK;
-using System;
 using System.Xml;
 
 namespace Pokimon
@@ -99,7 +98,7 @@ namespace Pokimon
                     {
                         //calculate the index of every pixel in the tile and take it from the tileset to be copied on the chunk texture
 
-                        int pixelOnMapPosition = ((tilePosY + y) * width * tileset.TileHeight + (x + tilePosX)) * 4; // y * width + x, Tile position on the map
+                        int pixelOnMapPosition = ((tilePosY + y) * width * tileset.TileHeight + (x + tilePosX)) * 4; // y * width + x, Tile position on the map -> tilePosY + y to get the y coordinate of the pixel (tileY + pixelY), width * tileHeight is beacause otherwise every line of pixels will override each other, * 4 is to get rgba
                         int pixelOnTexturePosition = (startPixel + x + (y * tileset.TilesetTexture.Width)) * 4; // Tile position on the lookup texture (tileset)
                         newBitmap[pixelOnMapPosition] = tileset.TilesetTexture.Bitmap[pixelOnTexturePosition];
                         newBitmap[pixelOnMapPosition + 1] = tileset.TilesetTexture.Bitmap[pixelOnTexturePosition + 1];
@@ -128,7 +127,6 @@ namespace Pokimon
             }
 
             sprite.DrawTexture(texture);
-            //sprite.DrawWireframe(255, 255, 255);
         }
     }
 }

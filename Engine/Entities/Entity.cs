@@ -79,7 +79,6 @@ namespace Pokimon
                 float textureOffY = textureOffsetY * 16;
 
                 sprite.DrawTexture(texture, (int)textureOffX, (int)textureOffY, (int)spriteW, (int)spriteH);
-                //sprite.DrawWireframe(255, 255, 255);
             }
         }
     }

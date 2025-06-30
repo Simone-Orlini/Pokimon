@@ -61,6 +61,7 @@ namespace Pokimon
             base.Update();
             camera.position = Vector2.Lerp(camera.position, player.Position, 0.05f);
 
+            // Apply camera limits
             camera.position.X = MathHelper.Clamp(camera.position.X, cameraLimits.MinX + camera.pivot.X, cameraLimits.MaxX - camera.pivot.X);
             camera.position.Y = MathHelper.Clamp(camera.position.Y, cameraLimits.MinY + camera.pivot.Y, cameraLimits.MaxY - camera.pivot.Y);
 
@@ -72,15 +73,11 @@ namespace Pokimon
                 {
                     if (Map.EntrancePoints[i].Locked)
                     {
-                        lockedEntrance = Map.EntrancePoints[i];
+                        lockedEntrance = Map.EntrancePoints[i]; // get the locked door
                     }
                 }
 
-                if (lockedEntrance == null)
-                {
-
-                }
-                else if (player.Position == lockedEntrance.Position + new Vector2(0, 1))
+                if (lockedEntrance != null && player.Position == lockedEntrance.Position + new Vector2(0, 1))
                 {
                     OpenDoor(lockedEntrance.Position);
 
